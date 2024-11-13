@@ -76,17 +76,6 @@ st.markdown("""
 # Header
 st.markdown('<div class="header">Tee & Tell - Guess the PGA Player\'s Swing</div>', unsafe_allow_html=True)
 st.image('TT.png')
-header_html = """
-    <div style="display: flex; align-items: center;">
-        <img src="TT.png" style="height: 50px; margin-right: 10px;">
-        <div style="font-size: 24px; font-weight: bold; color: #333;">
-            Tee & Tell - Guess the PGA Player's Swing
-        </div>
-    </div>
-"""
-
-# Use the header HTML in markdown
-st.markdown(header_html, unsafe_allow_html=True)
 
 # Tab Buttons for navigation
 tabs = ["Home", "Instructions", "Past Player List", "About"]
