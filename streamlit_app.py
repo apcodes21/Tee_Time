@@ -1,5 +1,84 @@
 import streamlit as st
 
+import streamlit as st
+
+# Set page config (for better control over the title and layout)
+st.set_page_config(page_title="Professional Webpage", page_icon=":book:", layout="wide")
+
+# Header Section
+st.markdown("""
+    <style>
+        .header {
+            font-size: 36px;
+            font-weight: bold;
+            color: #4CAF50;
+            text-align: center;
+        }
+        .sub-header {
+            font-size: 24px;
+            color: #333333;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .toc {
+            font-size: 18px;
+            font-weight: bold;
+            color: #4CAF50;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+        }
+        .toc-item {
+            padding-left: 20px;
+            margin-bottom: 5px;
+        }
+        .toc-item a {
+            text-decoration: none;
+            color: #0073e6;
+        }
+        .toc-item a:hover {
+            color: #0056b3;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
+# Display Header
+st.markdown('<p class="header">Welcome to My Professional Webpage</p>', unsafe_allow_html=True)
+st.markdown('<p class="sub-header">An example of a professional header and table of contents</p>', unsafe_allow_html=True)
+
+# Table of Contents Sidebar (Navigation links)
+toc = """
+    <div class="toc">
+        <div class="toc-item"><a href="#section1">1. Introduction</a></div>
+        <div class="toc-item"><a href="#section2">2. Features</a></div>
+        <div class="toc-item"><a href="#section3">3. Use Cases</a></div>
+        <div class="toc-item"><a href="#section4">4. Contact</a></div>
+    </div>
+"""
+st.sidebar.markdown(toc, unsafe_allow_html=True)
+
+# Section 1: Introduction
+st.markdown('<a id="section1"></a>', unsafe_allow_html=True)
+st.header('1. Introduction')
+st.write("This is the introduction section. You can add any content here.")
+
+# Section 2: Features
+st.markdown('<a id="section2"></a>', unsafe_allow_html=True)
+st.header('2. Features')
+st.write("This section describes the features of the webpage.")
+
+# Section 3: Use Cases
+st.markdown('<a id="section3"></a>', unsafe_allow_html=True)
+st.header('3. Use Cases')
+st.write("Here are some example use cases for the application or webpage.")
+
+# Section 4: Contact
+st.markdown('<a id="section4"></a>', unsafe_allow_html=True)
+st.header('4. Contact')
+st.write("You can contact us at: contact@mywebpage.com")
+
+
+
 # Custom CSS for full-width layout
 st.markdown("""
     <style>
