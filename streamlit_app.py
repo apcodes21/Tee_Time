@@ -3,7 +3,7 @@ import streamlit as st
 import streamlit as st
 
 # Set page config (for better control over the title and layout)
-st.set_page_config(page_title="Tee it Up", page_icon=":book:", layout="wide")
+st.set_page_config(page_title="Tee it Up", page_icon=":golf:", layout="wide")
 
 # Header Section
 st.markdown("""
