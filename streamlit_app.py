@@ -77,7 +77,7 @@ st.markdown("""
 st.markdown('<div class="header">Guess the PGA Player\'s Swing</div>', unsafe_allow_html=True)
 
 # Tab Buttons for navigation
-tabs = ["Home", "Instructions", "Leaderboard", "About"]
+tabs = ["Home", "Instructions", "Past Player List", "About"]
 selected_tab = "Home"
 
 # Creating buttons for each tab
@@ -89,8 +89,8 @@ with col2:
     if st.button('Instructions'):
         selected_tab = "Instructions"
 with col3:
-    if st.button('Leaderboard'):
-        selected_tab = "Leaderboard"
+    if st.button('Past Player List'):
+        selected_tab = "Past Player List"
 with col4:
     if st.button('About'):
         selected_tab = "About"
@@ -101,7 +101,6 @@ st.markdown('<div class="main-content">', unsafe_allow_html=True)
 # Tab Content
 if selected_tab == "Home":
     st.write("#1: 11/14/2024")
-    st.button('Past Player List')
     st.subheader("Welcome to the PGA Player Swing Guessing Game!")
     st.write("""
         Look at the swing GIF and try to guess the player performing the swing. You can select the player's name 
