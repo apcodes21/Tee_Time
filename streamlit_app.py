@@ -184,7 +184,7 @@ if selected_tab == "Home":
 
 
     st.markdown('''
-        <div style="display: flex; justify-content: center; align-items: center; height: 30vh;">
+        <div style="display: flex; justify-content: center; align-items: center; height: 40vh;">
             <img src="https://github.com/apcodes21/Tee_Time/blob/main/image0.gif?raw=true" alt="GIF" style="height: 500px;">
         </div>
     ''', unsafe_allow_html=True)
