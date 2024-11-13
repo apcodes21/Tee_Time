@@ -185,7 +185,7 @@ if selected_tab == "Home":
         else:
             st.write("No matching players found.")
     else:
-        st.write("Start typing to see suggestions.")
+        st.write("Player Options:.")
 
 
 
