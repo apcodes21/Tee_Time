@@ -70,6 +70,9 @@ toc = """
     </div>
 """
 
+# Use st.markdown to display HTML
+st.markdown(toc, unsafe_allow_html=True)
+
 st.sidebar.markdown(toc, unsafe_allow_html=True)
 
 # Custom CSS for full-width layout
