@@ -5,7 +5,7 @@ players = ['Tiger Woods', 'Rory McIlroy', 'Phil Mickelson', 'Dustin Johnson', 'B
            'Jordan Spieth', 'Justin Thomas', 'Jon Rahm', 'Bryson DeChambeau', 'Collin Morikawa']
 
 # Title of the app
-st.title("""
+st.markdown("""
     <h1 style="text-align: center;">Tee & Tell</h1>
 """, unsafe_allow_html=True)
 
