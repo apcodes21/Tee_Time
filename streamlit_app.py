@@ -43,8 +43,6 @@ st.markdown("""
 # Display Header
 st.markdown('<p class="header">Guess the PGA Players swing</p>', unsafe_allow_html=True)
 
-st.sidebar.markdown(toc, unsafe_allow_html=True)
-
 # Custom CSS for full-width layout
 st.markdown("""
     <style>
