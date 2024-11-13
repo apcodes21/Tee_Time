@@ -155,10 +155,7 @@ if 'player_history' not in st.session_state:
 
 # Tab Content
 if selected_tab == "Home":
-    st.subheader("#1: 11/14/2024")
-    st.write("""
-        Look at the swing and try to guess the player performing the swing.
-    """)
+    st.subheader("#1: 11/14/2024      Look at the swing and try to guess the player performing the swing.")
     # # Display the GIF of the player's swing (replace with an actual player's swing GIF)
     # st.video("https://vimeo.com/1029391107")  # Example GIF URL
     
