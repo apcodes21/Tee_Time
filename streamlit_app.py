@@ -250,30 +250,30 @@ if selected_tab == "Home":
     # Text input box for user to type the player's name
     player_input = st.text_input("Start typing the name of the PGA player & press enter:", placeholder="Guess the Tour Pro")
 
-    # Only show suggestions if the user has typed something
-    if player_input:
-        # Filter players based on the input text
-        filtered_players = [player for player in players if player_input.lower() in player.lower()]
+# Only show suggestions if the user has typed something
+if player_input:
+    # Filter players based on the input text
+    filtered_players = [player for player in players if player_input.lower() in player.lower()]
 
-        # If there are matching players, display them as clickable buttons
-        if filtered_players:
-            st.write("**Suggestions**:")
-            for player in filtered_players:
-                if st.button(player):  # Create a button for each filtered player
-                    # If a suggestion is clicked, store the player's name as the guess
-                    guess = player
-                    # Correct player for the swing (you can change this dynamically based on the GIF)
-                    correct_player = "Scottie Scheffler"  # Replace this with the actual player for the GIF
+    # If there are matching players, display them as clickable buttons
+    if filtered_players:
+        st.write("**Suggestions**:")
+        for player in filtered_players:
+            if st.button(player):  # Create a button for each filtered player
+                # If a suggestion is clicked, store the player's name as the guess
+                guess = player
+                # Correct player for the swing (you can change this dynamically based on the GIF)
+                correct_player = "Scottie Scheffler"  # Replace this with the actual player for the GIF
 
-                    # Check if the guess is correct and provide feedback
-                    if guess == correct_player:
-                        st.success(f"Congratulations! {guess} is correct!")
-                    else:
-                        st.error(f"Oops! {guess} is not correct. Try again.")
-        else:
-            st.write("No matching players found.")
+                # Check if the guess is correct and provide feedback
+                if guess == correct_player:
+                    st.success(f"Congratulations! {guess} is correct!")
+                else:
+                    st.error(f"Oops! {guess} is not correct. Try again.")
     else:
-        st.write("Player Options:.")
+        st.write("No matching players found.")
+else:
+    st.write("Player Options:.")
 
 
 
