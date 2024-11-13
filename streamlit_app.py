@@ -45,7 +45,7 @@ st.markdown('<p class="header">Guess the PGA Players swing</p>', unsafe_allow_ht
 
 st.markdown('''
     <div style="display: flex; align-items: center;">
-        <img src="https://github.com/apcodes21/Tee_Time/blob/main/TT.png?raw=true" alt="PGA Logo" style="height: 100px; margin-right: 10px;">
+        <img src="https://github.com/apcodes21/Tee_Time/blob/main/TT.png?raw=true" alt="PGA Logo" style="height: 75px; margin-right: 10px;">
         <p class="header">Guess the PGA Players swing</p>
     </div>
 ''', unsafe_allow_html=True)
