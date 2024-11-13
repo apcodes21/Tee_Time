@@ -106,7 +106,9 @@ if selected_tab == "Home":
         from the suggestions that appear as you type.
     """)
     # Display the GIF of the player's swing (replace with an actual player's swing GIF)
-    st.image("https://vimeo.com/1029391107", use_column_width=True)  # Example GIF URL
+    st.video("https://vimeo.com/1029391107", use_column_width=True)  # Example GIF URL
+
+
     
     # List of players for guessing
     players = ['Tiger Woods', 'Rory McIlroy', 'Phil Mickelson', 'Dustin Johnson', 'Brooks Koepka', 
