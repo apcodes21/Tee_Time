@@ -187,6 +187,30 @@ if selected_tab == "Home":
     else:
         st.write("Start typing to see suggestions.")
 
+
+
+    # List of predefined suggestions (this could be fetched from a database or API)
+    suggestions = ["apple", "banana", "cherry", "grape", "orange", "pear", "pineapple"]
+    
+    # Function to filter suggestions based on user input
+    def get_suggestions(query):
+        return [word for word in suggestions if word.lower().startswith(query.lower())]
+    
+    # Streamlit UI
+    st.title("Auto-suggest while typing")
+    
+    # Text input widget for capturing user input
+    user_input = st.text_input("Type a fruit name:")
+    
+    # Get and display suggestions as the user types
+    if user_input:
+        filtered_suggestions = get_suggestions(user_input)
+        if filtered_suggestions:
+            st.write("Suggestions:", filtered_suggestions)
+        else:
+            st.write("No suggestions found.")
+
+
 elif selected_tab == "Instructions":
     st.subheader("How to Play:")
     st.write("""
