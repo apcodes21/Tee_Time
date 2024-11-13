@@ -43,16 +43,16 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Display Header
-st.markdown('<p class="header">Welcome to My Professional Webpage</p>', unsafe_allow_html=True)
+st.markdown('<p class="header">Guess the PGA Player's swing </p>', unsafe_allow_html=True)
 st.markdown('<p class="sub-header">An example of a professional header and table of contents</p>', unsafe_allow_html=True)
 
 # Table of Contents Sidebar (Navigation links)
 toc = """
     <div class="toc">
-        <div class="toc-item"><a href="#section1">1. Introduction</a></div>
-        <div class="toc-item"><a href="#section2">2. Features</a></div>
-        <div class="toc-item"><a href="#section3">3. Use Cases</a></div>
-        <div class="toc-item"><a href="#section4">4. Contact</a></div>
+        <div class="toc-item"><a href="#section1">1. Home</a></div>
+        <div class="toc-item"><a href="#section2">2. Instructions</a></div>
+        <div class="toc-item"><a href="#section3">3. Past Players </a></div>
+        <div class="toc-item"><a href="#section4">4. About</a></div>
     </div>
 """
 st.sidebar.markdown(toc, unsafe_allow_html=True)
