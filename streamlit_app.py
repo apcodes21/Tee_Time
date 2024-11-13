@@ -108,14 +108,15 @@ if selected_tab == "Home":
     # # Display the GIF of the player's swing (replace with an actual player's swing GIF)
     # st.video("https://vimeo.com/1029391107")  # Example GIF URL
 
+  import streamlit as st
+
     # Vimeo video ID
-    video_id = "1029391107"  # Replace with the ID from the URL
+    video_id = "1029391107"  # Replace with your Vimeo video ID
     
-    # Embed the Vimeo video with loop and autoplay enabled
+    # Embed the Vimeo video with autoplay and loop enabled
     embed_code = f"""
     <iframe src="https://player.vimeo.com/video/{video_id}?autoplay=1&loop=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     """
-    
     # Display the embedded video using markdown
     st.markdown(embed_code, unsafe_allow_html=True)
 
