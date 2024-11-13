@@ -74,7 +74,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Header
-st.markdown('<div class="header">Guess the PGA Player\'s Swing</div>', unsafe_allow_html=True)
+st.markdown('<div class="header">Tee & Tell - Guess the PGA Player\'s Swing</div>', unsafe_allow_html=True)
 
 # Tab Buttons for navigation
 tabs = ["Home", "Instructions", "Past Player List", "About"]
@@ -199,10 +199,10 @@ elif selected_tab == "Instructions":
         5. After selecting a player, feedback will be provided (correct or incorrect).
     """)
 
-elif selected_tab == "Leaderboard":
-    st.subheader("Leaderboard")
+elif selected_tab == "Past Player List":
+    st.subheader("Past Player List")
     st.write("""
-        Here we will display a leaderboard once we add functionality to track and save scores.
+        Here we will display a list of previous player guesses.
     """)
 
 elif selected_tab == "About":
