@@ -5,7 +5,9 @@ players = ['Tiger Woods', 'Rory McIlroy', 'Phil Mickelson', 'Dustin Johnson', 'B
            'Jordan Spieth', 'Justin Thomas', 'Jon Rahm', 'Bryson DeChambeau', 'Collin Morikawa']
 
 # Title of the app
-st.title("Tee & Tell")
+st.title("""
+    <h1 style="text-align: center;">Tee & Tell"</h1>
+""", unsafe_allow_html=True)
 
 # Display the GIF of the player's swing (replace with an actual player's swing GIF)
 st.image("https://media1.giphy.com/media/KQGFjLggOsvUsSD5ha/200.webp?cid=790b7611lowkco26j5fqc4azn3k967ka1clq3fcsfvm9i4h7&ep=v1_gifs_search&rid=200.webp&ct=g", use_container_width=True)  # Example GIF URL
