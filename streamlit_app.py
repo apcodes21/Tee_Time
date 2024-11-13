@@ -216,19 +216,19 @@ elif selected_tab == "Past Player List":
         Here we will display a list of previous player guesses.
     """)
 
-# Sample player history data for demonstration
-if st.session_state.player_history:
-    # Create a list with date and clickable links
-    player_data = [
-        (entry["date"], f"[Click here]({entry['https://vimeo.com/1029391107']})") 
-        for entry in st.session_state.player_history
-    ]
-    
-    # Display the data as Markdown
-    for date, link in player_data:
-        st.markdown(f"| {date} | {link} |")
-    else:
-        st.write("No player data available.")
+    # Sample player history data for demonstration
+    if st.session_state.player_history:
+        # Create a list with date and clickable links
+        player_data = [
+            (entry["date"], f"[Click here]({entry['https://vimeo.com/1029391107']})") 
+            for entry in st.session_state.player_history
+        ]
+        
+        # Display the data as Markdown
+        for date, link in player_data:
+            st.markdown(f"| {date} | {link} |")
+        else:
+            st.write("No player data available.")
 
 elif selected_tab == "About":
     st.subheader("About the Game")
