@@ -40,7 +40,7 @@ st.markdown('<div class="header">Guess the PGA Player\'s Swing</div>', unsafe_al
 
 # Tab Buttons for navigation
 tabs = ["Home", "Instructions", "Leaderboard", "About"]
-selected_tab = None
+selected_tab = "Home"
 
 # Creating buttons for each tab
 col1, col2, col3, col4 = st.columns(4)
