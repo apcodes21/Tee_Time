@@ -105,8 +105,19 @@ if selected_tab == "Home":
         Look at the swing GIF and try to guess the player performing the swing. You can select the player's name 
         from the suggestions that appear as you type.
     """)
-    # Display the GIF of the player's swing (replace with an actual player's swing GIF)
-    st.video("https://vimeo.com/1029391107")  # Example GIF URL
+    # # Display the GIF of the player's swing (replace with an actual player's swing GIF)
+    # st.video("https://vimeo.com/1029391107")  # Example GIF URL
+
+    # Vimeo video ID
+    video_id = "1029391107"  # Replace with the ID from the URL
+    
+    # Embed the Vimeo video with loop and autoplay enabled
+    embed_code = f"""
+    <iframe src="https://player.vimeo.com/video/{video_id}?autoplay=1&loop=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    """
+    
+    # Display the embedded video using markdown
+    st.markdown(embed_code, unsafe_allow_html=True)
 
 
     
