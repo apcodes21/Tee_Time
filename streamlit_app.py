@@ -160,7 +160,7 @@ if selected_tab == "Home":
 ]
     
     # Text input box for user to type the player's name
-    player_input = st.text_input("Start typing the name of the PGA player & press enter:")
+    player_input = st.text_input("Start typing the name of the PGA player & press enter:", placeholder="Guess the Tour Pro")
 
     # Only show suggestions if the user has typed something
     if player_input:
