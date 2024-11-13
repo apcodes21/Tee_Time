@@ -130,29 +130,43 @@ st.markdown("""
 tabs = ["Home", "Instructions", "Past Player List", "About"]
 selected_tab = "Home"
 
-# Creating 4 columns for each tab button to appear next to each other
-col1, col2, col3, col4 = st.columns(4)  # 4 equal columns
+st.markdown("""
+    <style>
+        .stButton>button {
+            margin: 0;
+            padding: 10px 20px;
+            width: 100%;
+        }
+        .button-container {
+            display: flex;
+            gap: 0;
+        }
+    </style>
+""", unsafe_allow_html=True)
 
-with col1:
-    if st.button('Home'):
-        selected_tab = "Home"
-with col2:
-    if st.button('Instructions'):
-        selected_tab = "Instructions"
-with col3:
-    if st.button('Past Player List'):
-        selected_tab = "Past Player List"
-with col4:
-    if st.button('About'):
-        selected_tab = "About"
-
-# Main content area (centered)
-st.markdown('<div class="main-content">', unsafe_allow_html=True)
-
-if 'player_history' not in st.session_state:
-    st.session_state.player_history = []
-
-
+# Create a container to hold the buttons
+with st.container():
+    # Creating 4 columns for each tab button to appear next to each other
+    col1, col2, col3, col4 = st.columns(4)  # 4 equal columns
+    
+    with col1:
+        if st.button('Home'):
+            selected_tab = "Home"
+    with col2:
+        if st.button('Instructions'):
+            selected_tab = "Instructions"
+    with col3:
+        if st.button('Past Player List'):
+            selected_tab = "Past Player List"
+    with col4:
+        if st.button('About'):
+            selected_tab = "About"
+    
+    # Main content area (centered)
+    st.markdown('<div class="main-content">', unsafe_allow_html=True)
+    
+    if 'player_history' not in st.session_state:
+        st.session_state.player_history = []
 
 # Tab Content
 if selected_tab == "Home":
