@@ -6,7 +6,7 @@ players = ['Tiger Woods', 'Rory McIlroy', 'Phil Mickelson', 'Dustin Johnson', 'B
 
 # Title of the app
 st.title("""
-    <h1 style="text-align: center;">Tee & Tell"</h1>
+    <h1 style="text-align: center;">Tee & Tell</h1>
 """, unsafe_allow_html=True)
 
 # Display the GIF of the player's swing (replace with an actual player's swing GIF)
