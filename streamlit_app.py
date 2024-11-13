@@ -12,7 +12,7 @@ st.markdown("""
             text-align: center;
         }
         .sub-header {
-            font-size: 24px;
+            font-size: 14px;
             color: #333333;
             margin-top: 10px;
             text-align: center;
