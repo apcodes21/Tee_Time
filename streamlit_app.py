@@ -116,7 +116,7 @@ st.markdown("""
 
         /* Align image and other elements properly */
         .main-content img {
-            width: 100%;
+            width: 50%;
             max-width: 1000px; /* Limit max width to prevent over-expansion */
             margin-top: 20px;
         }
