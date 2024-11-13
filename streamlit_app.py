@@ -60,4 +60,4 @@ if selected_tab == "Home":
                     if guess == correct_player:
                         st.success(f"Congratulations! {guess} is correct!")
                     else:
-                        st.error(f"Oops! {guess} is not correct. Try again.
+                        st.error(f"Oops! {guess} is not correct. Try again.)
