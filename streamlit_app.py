@@ -218,15 +218,15 @@ elif selected_tab == "Past Player List":
 
     # Sample player history data for demonstration
     if st.session_state.player_history:
-    player_data = [
-        (entry["date"], entry['https://vimeo.com/1029391107'])
-        for entry in st.session_state.player_history
-    ]
-    
-    # Displaying plain URLs (not clickable)
-    st.table(player_data)
+        player_data = [
+            (entry["date"], entry['https://vimeo.com/1029391107'])
+            for entry in st.session_state.player_history
+        ]
+        
+        # Displaying plain URLs (not clickable)
+        st.table(player_data)
     else:
-    st.write("No player data available.")
+        st.write("No player data available.")
 
 elif selected_tab == "About":
     st.subheader("About the Game")
