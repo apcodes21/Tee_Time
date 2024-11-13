@@ -161,7 +161,7 @@ if selected_tab == "Home":
     """)
     # # Display the GIF of the player's swing (replace with an actual player's swing GIF)
     # st.video("https://vimeo.com/1029391107")  # Example GIF URL
-    st.video("image0.gif)
+    st.video("image0.gif")
     # Vimeo video ID
     player_dict = {
     "name": "Scottie Scheffler",
