@@ -19,42 +19,14 @@ st.markdown("""
             font-weight: bold;
             width: 100%;
             box-sizing: border-box;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
         }
 
-        /* Full-width content */
-        .content {
-            width: 100%;
-            padding: 0;
-            box-sizing: border-box;
-            margin-top: 100px; /* Adjust space to fit header */
-        }
-
-        /* Make sure the entire page is utilized */
-        .main-content {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        /* Images and elements should not overflow */
-        .main-content img {
-            width: 100%;
-            max-width: 1000px; /* Limit max width to prevent over-expansion */
-            margin-top: 20px;
-        }
-
-        /* Styling the buttons in the navigation */
+        /* Button styling */
         .tab-buttons {
             display: flex;
             justify-content: center;
-            margin-top: 30px;
-            margin-bottom: 30px;
-            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
 
         .tab-buttons button {
@@ -65,24 +37,50 @@ st.markdown("""
             margin: 0 10px;
             cursor: pointer;
             font-size: 16px;
-            width: auto;
         }
 
         .tab-buttons button:hover {
             background-color: #004d00;
         }
 
+        /* Full-width content */
+        .content {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Main content area */
+        .main-content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Align image and other elements properly */
+        .main-content img {
+            width: 100%;
+            max-width: 1000px; /* Limit max width to prevent over-expansion */
+            margin-top: 20px;
+        }
+
+        /* Make buttons for tabs appear full width and centered */
+        .tab-buttons button {
+            width: auto;
+            margin: 0 10px;
+        }
     </style>
 """, unsafe_allow_html=True)
 
-# Full-width header
+# Header
 st.markdown('<div class="header">Guess the PGA Player\'s Swing</div>', unsafe_allow_html=True)
 
-# Button navigation
+# Tab Buttons for navigation
 tabs = ["Home", "Instructions", "Leaderboard", "About"]
 selected_tab = "Home"
 
-# Create buttons for each tab
+# Creating buttons for each tab
 col1, col2, col3, col4 = st.columns(4)
 with col1:
     if st.button('Home'):
@@ -165,5 +163,4 @@ elif selected_tab == "About":
         It's a fun way to test your knowledge of the PGA players!
     """)
 
-# End of main content area
 st.markdown('</div>', unsafe_allow_html=True)
