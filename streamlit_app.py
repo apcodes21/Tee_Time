@@ -176,7 +176,7 @@ if selected_tab == "Home":
     
     # Embed the Vimeo video with autoplay and loop enabled
     embed_code = f"""
-    <iframe src="https://player.vimeo.com/video/{video_id}?autoplay=1&loop=1" width="5000" height="420" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <iframe src="https://player.vimeo.com/video/{video_id}?autoplay=1&loop=1" width="1000" height="420" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     """
     # Display the embedded video using markdown
     st.markdown(embed_code, unsafe_allow_html=True)
