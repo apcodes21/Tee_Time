@@ -42,13 +42,19 @@ st.markdown("""
 
 # Display Header
 st.markdown('<p class="header">Guess the PGA Players swing</p>', unsafe_allow_html=True)
-
 st.markdown('''
-    <div style="display: flex; align-items: center;">
+    <div style="display: flex; align-items: center; height: 90px;">
         <img src="https://github.com/apcodes21/Tee_Time/blob/main/TT.png?raw=true" alt="PGA Logo" style="height: 90px; margin-right: 10px;">
-        <p class="header">Guess the PGA Players swing</p>
+        <p class="header" style="font-size: 24px; margin: 0;">Guess the PGA Players swing</p>
     </div>
 ''', unsafe_allow_html=True)
+
+# st.markdown('''
+#     <div style="display: flex; align-items: center;">
+#         <img src="https://github.com/apcodes21/Tee_Time/blob/main/TT.png?raw=true" alt="PGA Logo" style="height: 90px; margin-right: 10px;">
+#         <p class="header">Guess the PGA Players swing</p>
+#     </div>
+# ''', unsafe_allow_html=True)
 
 
 # Custom CSS for full-width layout
