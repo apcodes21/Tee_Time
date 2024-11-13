@@ -40,17 +40,15 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# Display Header
-# st.markdown('<p class="header">Guess the PGA Players swing</p>', unsafe_allow_html=True)
+# Display Header (centered)
 st.markdown('''
-    <div style="display: flex; align-items: center; height: 90px;">
+    <div style="display: flex; align-items: center; justify-content: center; height: 90px;">
         <img src="https://github.com/apcodes21/Tee_Time/blob/main/TT.png?raw=true" alt="PGA Logo" style="height: 90px; margin-right: 10px;">
         <p class="header" style="font-size: 32px; margin: 0;">Guess the PGA Players swing</p>
     </div>
 ''', unsafe_allow_html=True)
 
-
-# Custom CSS for full-width layout
+# Custom CSS for full-width layout and centering content
 st.markdown("""
     <style>
         /* Remove default padding and margins */
@@ -59,19 +57,34 @@ st.markdown("""
             padding: 0;
         }
 
-        /* Full-width header */
-        .header {
-            background-color: #006400;  /* Dark green color */
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-            font-size: 32px;
-            font-weight: bold;
+        /* Full-width content section */
+        .content {
             width: 100%;
+            padding: 20px;
             box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
-        /* Button styling */
+        /* Center align all content within the main content area */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        /* Center the video player */
+        .main-content iframe {
+            max-width: 1000px;
+            width: 80%;
+            margin-top: 20px;
+        }
+
+        /* Center text and buttons */
         .tab-buttons {
             display: flex;
             justify-content: center;
@@ -92,46 +105,14 @@ st.markdown("""
         .tab-buttons button:hover {
             background-color: #333;
         }
-
-        /* Full-width content */
-        .content {
-            width: 100%;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        /* Main content area */
-        .main-content {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        /* Align image and other elements properly */
-        .main-content img {
-            width: 50%;
-            max-width: 1000px; /* Limit max width to prevent over-expansion */
-            margin-top: 20px;
-        }
-
-        /* Make buttons for tabs appear full width and centered */
-        .tab-buttons button {
-            width: auto;
-            margin: 0 10px;
-        }
     </style>
 """, unsafe_allow_html=True)
-
-
-
-# st.image('TT.png', width = 500)
 
 # Tab Buttons for navigation
 tabs = ["Home", "Instructions", "Past Player List", "About"]
 selected_tab = "Home"
 
-# Creating buttons for each tab
+# Creating buttons for each tab (Centered)
 col1, col2, col3, col4 = st.columns(4)
 with col1:
     if st.button('Home'):
@@ -152,8 +133,6 @@ st.markdown('<div class="main-content">', unsafe_allow_html=True)
 if 'player_history' not in st.session_state:
     st.session_state.player_history = []
 
-
-
 # Tab Content
 if selected_tab == "Home":
     st.subheader("#1: 11/14/2024")
@@ -162,73 +141,63 @@ if selected_tab == "Home":
         Look at the swing GIF and try to guess the player performing the swing. You can select the player's name 
         from the suggestions that appear as you type.
     """)
-    # # Display the GIF of the player's swing (replace with an actual player's swing GIF)
-    # st.video("https://vimeo.com/1029391107")  # Example GIF URL
 
     # Vimeo video ID
     player_dict = {
-    "name": "Scottie Scheffler",
-    "video_id": "1029391107",
-    "full_path": "https://player.vimeo.com/video/1029391107"
+        "name": "Scottie Scheffler",
+        "video_id": "1029391107",
+        "full_path": "https://player.vimeo.com/video/1029391107"
     }
     
     video_id = "1029391107"  # Replace with your Vimeo video ID
     
-    # # Embed the Vimeo video with autoplay and loop enabled
-    # embed_code = f"""
-    # <iframe src="https://player.vimeo.com/video/{video_id}?autoplay=1&loop=1" width="1000" height="420" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-    # """
-    # # Display the embedded video using markdown
-    # st.markdown(embed_code, unsafe_allow_html=True)
-
+    # Embed the Vimeo video with autoplay and loop enabled
     embed_code = f"""
     <div style="display: flex; justify-content: center;">
         <iframe src="https://player.vimeo.com/video/{video_id}?autoplay=1&loop=1" width="1000" height="420" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     </div>
     """
-    # Display the embedded video using markdown
     st.markdown(embed_code, unsafe_allow_html=True)
 
-    
     # List of players for guessing
     players = [
-    "Jon Rahm", "Sahith Theegala", "Rory McIlroy", "Scottie Scheffler", "Patrick Cantlay", "Collin Morikawa",
-    "Jordan Spieth", "Xander Schauffele", "Brooks Koepka", "Justin Thomas", "Cameron Smith",
-    "Hideki Matsuyama", "Sam Burns", "Will Zalatoris", "Viktor Hovland", "Tony Finau",
-    "Matt Fitzpatrick", "Tom Kim", "Tommy Fleetwood", "Jason Day", "Dustin Johnson",
-    "Bubba Watson", "Sungjae Im", "Si Woo Kim", "Brian Harman", "Keegan Bradley",
-    "Adam Scott", "Louis Oosthuizen", "Zach Johnson", "Gary Woodland", "Billy Horschel",
-    "Cameron Young", "Maverick McNealy", "Max Homa", "Scott Stallings", "Sepp Straka",
-    "Mark Hubbard", "K.H. Lee", "Denny McCarthy", "J.T. Poston", "Chris Kirk",
-    "Lucas Glover", "Sungjae Im", "Satoshi Kodaira", "Sam Ryder", "Nick Taylor",
-    "Stewart Cink", "Ryan Palmer", "Matt Kuchar", "Kevin Kisner", "Bryson DeChambeau",
-    "Phil Mickelson", "Tiger Woods", "Lee Hodges", "Jordan Spieth", "Joaquín Niemann",
-    "Si Woo Kim", "Bryan Gay", "Charles Howell III", "Robert Streb", "Alex Noren",
-    "Tom Hoge", "Jason Kokrak", "Luke List", "Richard Bland", "Gary Woodland",
-    "Scott Piercy", "Danny Lee", "Michael Thompson", "Aaron Wise", "Adam Hadwin",
-    "Patton Kizzire", "Brian Gay", "Charley Hoffman", "Stewart Cink", "Pat Perez",
-    "Dylan Frittelli", "Andrew Putnam", "Joel Dahmen", "Scott Brown", "Kevin Na",
-    "Lucas Herbert", "Billy Mayfair", "Jim Furyk", "Bryce Garnett", "Troy Merritt",
-    "Kyle Stanley", "Brendan Steele", "Russell Knox", "Kevin Chappell", "Wyndham Clark",
-    "J.B. Holmes", "Mark Wilson", "Henrik Norlander", "Austin Cook", "Joel Dahmen",
-    "Sam Saunders", "Jesse Mueller", "Adam Long", "Zac Blair", "David Lipsky",
-    "Brandon Hagy", "Chad Ramey", "Martin Laird", "Chris Stroud", "Mackenzie Hughes",
-    "Cameron Champ", "Ryan Moore", "Matt Jones", "James Hahn", "Harold Varner III",
-    "Eric Cole", "Troy Merritt", "Vaughn Taylor", "Chris Baker", "Doug Ghim",
-    "D.J. Trahan", "Cameron Percy", "Michael Kim", "Ben Martin", "Stewart Cink",
-    "Vince Whaley", "Justin Suh", "Tyler Duncan", "Jared Wolfe", "David Toms",
-    "Ryan Armour", "Kurt Kitayama", "Nick Watney", "Peter Malnati", "Brice Garnett",
-    "Brian Stuard", "Bertie O'Neill", "Chad Campbell", "Jimmy Walker", "Jason Dufner",
-    "Morgan Hoffmann", "Matt Every", "Ricky Barnes", "Craig Stadler", "Curtis Strange",
-    "Mark O'Meara", "John Daly", "Tom Watson", "Bernhard Langer", "Fred Couples",
-    "Raymond Floyd", "Lee Trevino", "Tom Kite", "Hale Irwin", "Johnny Miller",
-    "Jack Nicklaus", "Gary Player", "Arnold Palmer", "Bobby Jones", "Sam Snead",
-    "Gene Sarazen", "Ben Hogan", "Walter Hagen", "Julius Boros", "Fuzzy Zoeller",
-    "Ken Venturi", "Tom Weiskopf", "David Duval", "Chris DiMarco", "Paul Azinger",
-    "Mark Calcavecchia", "Scott Hoch", "Nick Price", "Mark McNulty", "Greg Norman",
-    "Jim Furyk", "Phil Mickelson", "Mike Weir", "Bernhard Langer", "Fred Funk"
-]
-    
+        "Jon Rahm", "Sahith Theegala", "Rory McIlroy", "Scottie Scheffler", "Patrick Cantlay", "Collin Morikawa",
+        "Jordan Spieth", "Xander Schauffele", "Brooks Koepka", "Justin Thomas", "Cameron Smith",
+        "Hideki Matsuyama", "Sam Burns", "Will Zalatoris", "Viktor Hovland", "Tony Finau",
+        "Matt Fitzpatrick", "Tom Kim", "Tommy Fleetwood", "Jason Day", "Dustin Johnson",
+        "Bubba Watson", "Sungjae Im", "Si Woo Kim", "Brian Harman", "Keegan Bradley",
+        "Adam Scott", "Louis Oosthuizen", "Zach Johnson", "Gary Woodland", "Billy Horschel",
+        "Cameron Young", "Maverick McNealy", "Max Homa", "Scott Stallings", "Sepp Straka",
+        "Mark Hubbard", "K.H. Lee", "Denny McCarthy", "J.T. Poston", "Chris Kirk",
+        "Lucas Glover", "Sungjae Im", "Satoshi Kodaira", "Sam Ryder", "Nick Taylor",
+        "Stewart Cink", "Ryan Palmer", "Matt Kuchar", "Kevin Kisner", "Bryson DeChambeau",
+        "Phil Mickelson", "Tiger Woods", "Lee Hodges", "Jordan Spieth", "Joaquín Niemann",
+        "Si Woo Kim", "Bryan Gay", "Charles Howell III", "Robert Streb", "Alex Noren",
+        "Tom Hoge", "Jason Kokrak", "Luke List", "Richard Bland", "Gary Woodland",
+        "Scott Piercy", "Danny Lee", "Michael Thompson", "Aaron Wise", "Adam Hadwin",
+        "Patton Kizzire", "Brian Gay", "Charley Hoffman", "Stewart Cink", "Pat Perez",
+        "Dylan Frittelli", "Andrew Putnam", "Joel Dahmen", "Scott Brown", "Kevin Na",
+        "Lucas Herbert", "Billy Mayfair", "Jim Furyk", "Bryce Garnett", "Troy Merritt",
+        "Kyle Stanley", "Brendan Steele", "Russell Knox", "Kevin Chappell", "Wyndham Clark",
+        "J.B. Holmes", "Mark Wilson", "Henrik Norlander", "Austin Cook", "Joel Dahmen",
+        "Sam Saunders", "Jesse Mueller", "Adam Long", "Zac Blair", "David Lipsky",
+        "Brandon Hagy", "Chad Ramey", "Martin Laird", "Chris Stroud", "Mackenzie Hughes",
+        "Cameron Champ", "Ryan Moore", "Matt Jones", "James Hahn", "Harold Varner III",
+        "Eric Cole", "Troy Merritt", "Vaughn Taylor", "Chris Baker", "Doug Ghim",
+        "D.J. Trahan", "Cameron Percy", "Michael Kim", "Ben Martin", "Stewart Cink",
+        "Vince Whaley", "Justin Suh", "Tyler Duncan", "Jared Wolfe", "David Toms",
+        "Ryan Armour", "Kurt Kitayama", "Nick Watney", "Peter Malnati", "Brice Garnett",
+        "Brian Stuard", "Bertie O'Neill", "Chad Campbell", "Jimmy Walker", "Jason Dufner",
+        "Morgan Hoffmann", "Matt Every", "Ricky Barnes", "Craig Stadler", "Curtis Strange",
+        "Mark O'Meara", "John Daly", "Tom Watson", "Bernhard Langer", "Fred Couples",
+        "Raymond Floyd", "Lee Trevino", "Tom Kite", "Hale Irwin", "Johnny Miller",
+        "Jack Nicklaus", "Gary Player", "Arnold Palmer", "Bobby Jones", "Sam Snead",
+        "Gene Sarazen", "Ben Hogan", "Walter Hagen", "Julius Boros", "Fuzzy Zoeller",
+        "Ken Venturi", "Tom Weiskopf", "David Duval", "Chris DiMarco", "Paul Azinger",
+        "Mark Calcavecchia", "Scott Hoch", "Nick Price", "Mark McNulty", "Greg Norman",
+        "Jim Furyk", "Phil Mickelson", "Mike Weir", "Bernhard Langer", "Fred Funk"
+    ]
+
     # Text input box for user to type the player's name
     player_input = st.text_input("Start typing the name of the PGA player & press enter:", placeholder="Guess the Tour Pro")
 
@@ -255,9 +224,7 @@ if selected_tab == "Home":
         else:
             st.write("No matching players found.")
     else:
-        st.write("Player Options:.")
-
-
+        st.write("Player Options:")
 
 elif selected_tab == "Instructions":
     st.subheader("How to Play:")
@@ -295,5 +262,3 @@ elif selected_tab == "About":
     """)
 
 st.markdown('</div>', unsafe_allow_html=True)
-
-
