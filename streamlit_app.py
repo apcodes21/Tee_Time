@@ -210,6 +210,7 @@ elif selected_tab == "Past Player List":
     st.write("""
         Here we will display a list of previous player guesses.
     """)
+    st.table()
 
 elif selected_tab == "About":
     st.subheader("About the Game")
