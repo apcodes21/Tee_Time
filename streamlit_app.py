@@ -88,9 +88,6 @@ header_html = """
 # Use the header HTML in markdown
 st.markdown(header_html, unsafe_allow_html=True)
 
-# Use the header HTML in markdown
-st.markdown(header_html, unsafe_allow_html=True)
-
 # Tab Buttons for navigation
 tabs = ["Home", "Instructions", "Past Player List", "About"]
 selected_tab = "Home"
