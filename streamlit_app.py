@@ -130,8 +130,9 @@ st.markdown("""
 tabs = ["Home", "Instructions", "Past Player List", "About"]
 selected_tab = "Home"
 
-# Creating centered columns for each tab button
-col1, col2, col3, col4 = st.columns([4, 4, 4, 4])  # Equal width columns
+# Creating 4 columns for each tab button to appear next to each other
+col1, col2, col3, col4 = st.columns(4)  # 4 equal columns
+
 with col1:
     if st.button('Home'):
         selected_tab = "Home"
@@ -147,15 +148,6 @@ with col4:
 
 # Main content area (centered)
 st.markdown('<div class="main-content">', unsafe_allow_html=True)
-
-# Optionally, you can add CSS to ensure everything is centered on the page if needed
-st.markdown('''
-    <style>
-        .css-1v3fvcr {  /* This targets the Streamlit columns layout */
-            justify-content: right;
-        }
-    </style>
-''', unsafe_allow_html=True)
 
 if 'player_history' not in st.session_state:
     st.session_state.player_history = []
