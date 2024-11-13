@@ -162,7 +162,21 @@ if selected_tab == "Home":
     # # Display the GIF of the player's swing (replace with an actual player's swing GIF)
     # st.video("https://vimeo.com/1029391107")  # Example GIF URL
     
-    st.image("image0.gif")
+    # st.image("image0.gif")
+
+    st.markdown(
+    """
+    <style>
+        .centered-image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;  /* You can adjust the percentage to make the image smaller or larger */
+        }
+    </style>
+    """, unsafe_allow_html=True)
+
+    st.markdown('<img class="centered-image" src="image0.gif">', unsafe_allow_html=True)
     
     # Vimeo video ID
     player_dict = {
@@ -170,24 +184,6 @@ if selected_tab == "Home":
     "video_id": "1029391107",
     "full_path": "https://player.vimeo.com/video/1029391107"
     }
-    
-    video_id = "1029391107"  # Replace with your Vimeo video ID
-    
-    # # Embed the Vimeo video with autoplay and loop enabled
-    # embed_code = f"""
-    # <iframe src="https://player.vimeo.com/video/{video_id}?autoplay=1&loop=1" width="1000" height="420" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-    # """
-    # # Display the embedded video using markdown
-    # st.markdown(embed_code, unsafe_allow_html=True)
-
-    embed_code = f"""
-    <div style="display: flex; justify-content: center;">
-        <iframe src="https://player.vimeo.com/video/{video_id}?autoplay=1&loop=1" width="1000" height="420" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-    </div>
-    """
-    # Display the embedded video using markdown
-    st.markdown(embed_code, unsafe_allow_html=True)
-
     
     # List of players for guessing
     players = [
