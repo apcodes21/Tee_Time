@@ -47,13 +47,29 @@ st.markdown('<p class="header">Guess the PGA Players swing</p>', unsafe_allow_ht
 
 # Table of Contents Sidebar (Navigation links)
 toc = """
-    <div class="toc">
-        <div class="toc-item"><a href="#section1" style="color: black;">1. Home</a></div>
-        <div class="toc-item"><a href="#section2" style="color: black;">2. Instructions</a></div>
-        <div class="toc-item"><a href="#section3" style="color: black;">3. Past Players </a></div>
-        <div class="toc-item"><a href="#section4" style="color: black;">4. About</a></div>
+    <style>
+        .image-container {
+            width: 150px;  /* Set the width of the container */
+            height: 150px; /* Set the height of the container */
+            overflow: hidden; /* Hide any overflowed content */
+            border: 2px solid #ccc; /* Optional: Add a border around the container */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px; /* Optional: rounded corners */
+            background-color: #f8f8f8; /* Optional: background color */
+        }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Make sure the image covers the container without distorting */
+        }
+    </style>
+    <div class="image-container">
+        <img src="TT.png" alt="Image">
     </div>
 """
+
 st.sidebar.markdown(toc, unsafe_allow_html=True)
 
 # Custom CSS for full-width layout
@@ -128,6 +144,8 @@ st.markdown("""
         }
     </style>
 """, unsafe_allow_html=True)
+
+
 
 st.image('TT.png', use_container_width=True, width = 500)
 
