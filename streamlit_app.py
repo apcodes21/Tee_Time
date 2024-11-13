@@ -30,7 +30,7 @@ st.markdown("""
         }
 
         .tab-buttons button {
-            background-color: #006400;
+            background-color: #333;
             color: white;
             padding: 10px 20px;
             border: none;
