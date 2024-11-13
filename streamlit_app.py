@@ -43,7 +43,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Display Header
-st.markdown('<p class="header">'Guess the PGA Player's swing' </p>', unsafe_allow_html=True)
+st.markdown('<p class="header">Guess the PGA Player's swing</p>', unsafe_allow_html=True)
 st.markdown('<p class="sub-header">An example of a professional header and table of contents</p>', unsafe_allow_html=True)
 
 # Table of Contents Sidebar (Navigation links)
