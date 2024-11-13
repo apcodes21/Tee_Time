@@ -74,7 +74,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Header
-st.markdown('<div class="header">Tee & Tell - Guess the PGA Player\'s Swing</div>', unsafe_allow_html=True)
+st.markdown('<div class="header">Guess the PGA Player\'s Swing</div>', unsafe_allow_html=True)
 st.image('TT.png')
 
 # Tab Buttons for navigation
