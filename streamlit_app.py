@@ -174,9 +174,17 @@ if selected_tab == "Home":
     
     video_id = "1029391107"  # Replace with your Vimeo video ID
     
-    # Embed the Vimeo video with autoplay and loop enabled
+    # # Embed the Vimeo video with autoplay and loop enabled
+    # embed_code = f"""
+    # <iframe src="https://player.vimeo.com/video/{video_id}?autoplay=1&loop=1" width="1000" height="420" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    # """
+    # # Display the embedded video using markdown
+    # st.markdown(embed_code, unsafe_allow_html=True)
+
     embed_code = f"""
-    <iframe src="https://player.vimeo.com/video/{video_id}?autoplay=1&loop=1" width="1000" height="420" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <div style="display: flex; justify-content: center;">
+        <iframe src="https://player.vimeo.com/video/{video_id}?autoplay=1&loop=1" width="1000" height="420" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
     """
     # Display the embedded video using markdown
     st.markdown(embed_code, unsafe_allow_html=True)
