@@ -11,6 +11,24 @@ st.markdown("""
             font-size: 32px;
             font-weight: bold;
         }
+        .tab-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .tab-buttons button {
+            background-color: #006400;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            margin: 0 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .tab-buttons button:hover {
+            background-color: #004d00;
+        }
         .tab-content {
             padding: 20px;
         }
@@ -20,9 +38,24 @@ st.markdown("""
 # Header
 st.markdown('<div class="header">Guess the PGA Player\'s Swing</div>', unsafe_allow_html=True)
 
-# Sidebar or Tab navigation using `st.radio`
+# Tab Buttons for navigation
 tabs = ["Home", "Instructions", "Leaderboard", "About"]
-selected_tab = st.radio("Select a tab", tabs)
+selected_tab = None
+
+# Creating buttons for each tab
+col1, col2, col3, col4 = st.columns(4)
+with col1:
+    if st.button('Home'):
+        selected_tab = "Home"
+with col2:
+    if st.button('Instructions'):
+        selected_tab = "Instructions"
+with col3:
+    if st.button('Leaderboard'):
+        selected_tab = "Leaderboard"
+with col4:
+    if st.button('About'):
+        selected_tab = "About"
 
 # Tab Content
 if selected_tab == "Home":
@@ -61,3 +94,30 @@ if selected_tab == "Home":
                         st.success(f"Congratulations! {guess} is correct!")
                     else:
                         st.error(f"Oops! {guess} is not correct. Try again.")
+        else:
+            st.write("No matching players found.")
+    else:
+        st.write("Start typing to see suggestions.")
+
+elif selected_tab == "Instructions":
+    st.subheader("How to Play:")
+    st.write("""
+        1. Look at the swing GIF displayed above.
+        2. Start typing the name of the PGA player you think is performing the swing.
+        3. Suggestions will appear based on your input.
+        4. Click on a suggestion to make your guess.
+        5. After selecting a player, feedback will be provided (correct or incorrect).
+    """)
+
+elif selected_tab == "Leaderboard":
+    st.subheader("Leaderboard")
+    st.write("""
+        Here we will display a leaderboard once we add functionality to track and save scores.
+    """)
+
+elif selected_tab == "About":
+    st.subheader("About the Game")
+    st.write("""
+        This game lets you guess which PGA Tour player is performing a golf swing based on GIFs of their swings.
+        It's a fun way to test your knowledge of the PGA players!
+    """)
