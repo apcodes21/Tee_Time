@@ -40,7 +40,7 @@ st.markdown("""
         }
 
         .tab-buttons button:hover {
-            background-color: #004d00;
+            background-color: #333;
         }
 
         /* Full-width content */
