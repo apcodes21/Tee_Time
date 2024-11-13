@@ -129,7 +129,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-st.image('TT.png', use_container_width=True)
+st.image('TT.png', use_container_width=True, width = 500)
 
 # Tab Buttons for navigation
 tabs = ["Home", "Instructions", "Past Player List", "About"]
