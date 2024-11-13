@@ -1,7 +1,5 @@
 import streamlit as st
 
-import streamlit as st
-
 # Set page config (for better control over the title and layout)
 st.set_page_config(page_title="Tee it Up", page_icon=":golf:", layout="wide")
 
@@ -44,34 +42,6 @@ st.markdown("""
 
 # Display Header
 st.markdown('<p class="header">Guess the PGA Players swing</p>', unsafe_allow_html=True)
-
-# Table of Contents Sidebar (Navigation links)
-toc = """
-    <style>
-        .image-container {
-            width: 150px;  /* Set the width of the container */
-            height: 150px; /* Set the height of the container */
-            overflow: hidden; /* Hide any overflowed content */
-            border: 2px solid #ccc; /* Optional: Add a border around the container */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 8px; /* Optional: rounded corners */
-            background-color: #f8f8f8; /* Optional: background color */
-        }
-        .image-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Make sure the image covers the container without distorting */
-        }
-    </style>
-    <div class="image-container">
-        <img src="TT.png" alt="Image">
-    </div>
-"""
-
-# Use st.markdown to display HTML
-st.markdown(toc, unsafe_allow_html=True)
 
 st.sidebar.markdown(toc, unsafe_allow_html=True)
 
