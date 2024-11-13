@@ -175,7 +175,7 @@ if selected_tab == "Home":
                     # If a suggestion is clicked, store the player's name as the guess
                     guess = player
                     # Correct player for the swing (you can change this dynamically based on the GIF)
-                    correct_player = "Tiger Woods"  # Replace this with the actual player for the GIF
+                    correct_player = "Scottie Scheffler"  # Replace this with the actual player for the GIF
 
                     # Check if the guess is correct and provide feedback
                     if guess == correct_player:
