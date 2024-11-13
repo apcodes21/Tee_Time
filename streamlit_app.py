@@ -57,24 +57,24 @@ toc = """
 """
 st.sidebar.markdown(toc, unsafe_allow_html=True)
 
-# Section 1: Introduction
+# Section 1: Home
 st.markdown('<a id="section1"></a>', unsafe_allow_html=True)
-st.header('1. Introduction')
+st.header('1. Home')
 st.write("This is the introduction section. You can add any content here.")
 
-# Section 2: Features
+# Section 2: Instructions
 st.markdown('<a id="section2"></a>', unsafe_allow_html=True)
-st.header('2. Features')
+st.header('2. Instructions')
 st.write("This section describes the features of the webpage.")
 
-# Section 3: Use Cases
+# Section 3: Past Players
 st.markdown('<a id="section3"></a>', unsafe_allow_html=True)
-st.header('3. Use Cases')
+st.header('3. Past Players')
 st.write("Here are some example use cases for the application or webpage.")
 
-# Section 4: Contact
+# Section 4: About
 st.markdown('<a id="section4"></a>', unsafe_allow_html=True)
-st.header('4. Contact')
+st.header('4. About')
 st.write("You can contact us at: contact@mywebpage.com")
 
 
