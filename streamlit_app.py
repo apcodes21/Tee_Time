@@ -78,7 +78,7 @@ st.markdown("""
 # st.image('TT.png')
 header_html = """
     <div style="display: flex; align-items: center;">
-        <img src="https://your_image_url/TT.png" style="height: 50px; margin-right: 10px;">
+        <img src="TT.png" style="height: 50px; margin-right: 10px;">
         <div style="font-size: 24px; font-weight: bold; color: #333;">
             Tee & Tell - Guess the PGA Player's Swing
         </div>
