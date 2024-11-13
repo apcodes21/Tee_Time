@@ -110,6 +110,12 @@ if selected_tab == "Home":
     # st.video("https://vimeo.com/1029391107")  # Example GIF URL
 
     # Vimeo video ID
+    player_dict = {
+    "name": "Scottie Scheffler",
+    "video_id": "1029391107",
+    "full_path": "https://player.vimeo.com/video/1029391107"
+    }
+    
     video_id = "1029391107"  # Replace with your Vimeo video ID
     
     # Embed the Vimeo video with autoplay and loop enabled
