@@ -48,10 +48,10 @@ st.markdown('<p class="header">Guess the PGA Players swing</p>', unsafe_allow_ht
 # Table of Contents Sidebar (Navigation links)
 toc = """
     <div class="toc">
-        <div class="toc-item"><a href="#section1">1. Home</a></div>
-        <div class="toc-item"><a href="#section2">2. Instructions</a></div>
-        <div class="toc-item"><a href="#section3">3. Past Players </a></div>
-        <div class="toc-item"><a href="#section4">4. About</a></div>
+        <div class="toc-item"><a href="#section1" style="color: black;">1. Home</a></div>
+        <div class="toc-item"><a href="#section2" style="color: black;">2. Instructions</a></div>
+        <div class="toc-item"><a href="#section3" style="color: black;">3. Past Players </a></div>
+        <div class="toc-item"><a href="#section4" style="color: black;">4. About</a></div>
     </div>
 """
 st.sidebar.markdown(toc, unsafe_allow_html=True)
