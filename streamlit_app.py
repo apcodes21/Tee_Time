@@ -176,14 +176,19 @@ if selected_tab == "Home":
     </style>
     """, unsafe_allow_html=True)
 
-    st.markdown('<img class="centered-image" src="image0.gif">', unsafe_allow_html=True)
+#     st.markdown('''
+#     <div style="display: flex; align-items: center; height: 90px;">
+#         <img src="https://github.com/apcodes21/Tee_Time/blob/main/image0.gif?raw=true" alt="GIF" style="height: 500px; margin-center: 300px;">
+#     </div>
+# ''', unsafe_allow_html=True)
+
 
     st.markdown('''
-    <div style="display: flex; align-items: center; height: 90px;">
-        <img src="https://github.com/apcodes21/Tee_Time/blob/main/image0.gif?raw=true" alt="GIF" style="height: 500px; margin-center: 300px;">
-    </div>
-''', unsafe_allow_html=True)
-    
+        <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+            <img src="https://github.com/apcodes21/Tee_Time/blob/main/image0.gif?raw=true" alt="GIF" style="height: 500px;">
+        </div>
+    ''', unsafe_allow_html=True)
+
     # Vimeo video ID
     player_dict = {
     "name": "Scottie Scheffler",
