@@ -122,7 +122,7 @@ if selected_tab == "Home":
     
     # List of players for guessing
     players = [
-    "Jon Rahm", "Rory McIlroy", "Scottie Scheffler", "Patrick Cantlay", "Collin Morikawa",
+    "Jon Rahm", "Sahith Theegala", "Rory McIlroy", "Scottie Scheffler", "Patrick Cantlay", "Collin Morikawa",
     "Jordan Spieth", "Xander Schauffele", "Brooks Koepka", "Justin Thomas", "Cameron Smith",
     "Hideki Matsuyama", "Sam Burns", "Will Zalatoris", "Viktor Hovland", "Tony Finau",
     "Matt Fitzpatrick", "Tom Kim", "Tommy Fleetwood", "Jason Day", "Dustin Johnson",
