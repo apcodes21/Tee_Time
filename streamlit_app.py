@@ -14,7 +14,7 @@ st.markdown("""
         .sub-header {
             font-size: 24px;
             color: #333333;
-            margin-top: 8px;
+            margin-top: 10px;
             text-align: center;
         }
         .toc {
