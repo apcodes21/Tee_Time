@@ -152,7 +152,7 @@ st.markdown('<div class="main-content">', unsafe_allow_html=True)
 st.markdown('''
     <style>
         .css-1v3fvcr {  /* This targets the Streamlit columns layout */
-            justify-content: center;
+            justify-content: right;
         }
     </style>
 ''', unsafe_allow_html=True)
