@@ -100,6 +100,8 @@ st.markdown('<div class="main-content">', unsafe_allow_html=True)
 
 # Tab Content
 if selected_tab == "Home":
+    st.write("#1: 11/14/2024")
+    st.button('Past Player List')
     st.subheader("Welcome to the PGA Player Swing Guessing Game!")
     st.write("""
         Look at the swing GIF and try to guess the player performing the swing. You can select the player's name 
@@ -117,9 +119,6 @@ if selected_tab == "Home":
     """
     # Display the embedded video using markdown
     st.markdown(embed_code, unsafe_allow_html=True)
-
-    st.write("#1: 11/14/2024")
-    st.button('Past Player List')
 
     
     # List of players for guessing
