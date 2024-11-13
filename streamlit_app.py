@@ -76,9 +76,6 @@ st.markdown("""
 # Header
 st.markdown('<div class="header">Guess the PGA Player\'s Swing</div>', unsafe_allow_html=True)
 
-st.write("#1: 11/14/2024")
-st.button('Past Player List')
-
 # Tab Buttons for navigation
 tabs = ["Home", "Instructions", "Leaderboard", "About"]
 selected_tab = "Home"
@@ -121,6 +118,8 @@ if selected_tab == "Home":
     # Display the embedded video using markdown
     st.markdown(embed_code, unsafe_allow_html=True)
 
+    st.write("#1: 11/14/2024")
+    st.button('Past Player List')
 
     
     # List of players for guessing
