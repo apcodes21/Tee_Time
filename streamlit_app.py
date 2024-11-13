@@ -177,6 +177,12 @@ if selected_tab == "Home":
     """, unsafe_allow_html=True)
 
     st.markdown('<img class="centered-image" src="image0.gif">', unsafe_allow_html=True)
+
+    st.markdown('''
+    <div style="display: flex; align-items: center; height: 90px;">
+        <img src="https://github.com/apcodes21/Tee_Time/blob/main/image0.gif?raw=true" alt="GIF" style="height: 90px; margin-right: 10px;">
+    </div>
+''', unsafe_allow_html=True)
     
     # Vimeo video ID
     player_dict = {
