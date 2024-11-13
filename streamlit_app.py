@@ -161,6 +161,41 @@ with st.container():
     with col4:
         if st.button('About'):
             selected_tab = "About"
+
+        elif selected_tab == "Instructions":
+            st.subheader("How to Play:")
+            st.write("""
+                1. Look at the swing GIF displayed above.
+                2. Start typing the name of the PGA player you think is performing the swing.
+                3. Suggestions will appear based on your input.
+                4. Click on a suggestion to make your guess.
+                5. After selecting a player, feedback will be provided (correct or incorrect).
+            """)
+        
+        elif selected_tab == "Past Player List":
+            st.subheader("Past Player List")
+            st.write("""
+                Here we will display a list of previous player guesses.
+            """)
+        
+            # Sample player history data for demonstration
+            if st.session_state.player_history:
+                player_data = [
+                    (entry["date"], entry['https://vimeo.com/1029391107'])
+                    for entry in st.session_state.player_history
+                ]
+                
+                # Displaying plain URLs (not clickable)
+                st.table(player_data)
+            else:
+                st.write("No player data available.")
+        
+        elif selected_tab == "About":
+            st.subheader("About the Game")
+            st.write("""
+                This game lets you guess which PGA Tour player is performing a golf swing based on GIFs of their swings.
+                It's a fun way to test your knowledge of the PGA players!
+            """)
     
     # Main content area (centered)
     st.markdown('<div class="main-content">', unsafe_allow_html=True)
@@ -274,42 +309,5 @@ if player_input:
         st.write("No matching players found.")
 else:
     st.write("Player Options:.")
-
-
-
-    elif selected_tab == "Instructions":
-        st.subheader("How to Play:")
-        st.write("""
-            1. Look at the swing GIF displayed above.
-            2. Start typing the name of the PGA player you think is performing the swing.
-            3. Suggestions will appear based on your input.
-            4. Click on a suggestion to make your guess.
-            5. After selecting a player, feedback will be provided (correct or incorrect).
-        """)
-    
-    elif selected_tab == "Past Player List":
-        st.subheader("Past Player List")
-        st.write("""
-            Here we will display a list of previous player guesses.
-        """)
-    
-        # Sample player history data for demonstration
-        if st.session_state.player_history:
-            player_data = [
-                (entry["date"], entry['https://vimeo.com/1029391107'])
-                for entry in st.session_state.player_history
-            ]
-            
-            # Displaying plain URLs (not clickable)
-            st.table(player_data)
-        else:
-            st.write("No player data available.")
-    
-    elif selected_tab == "About":
-        st.subheader("About the Game")
-        st.write("""
-            This game lets you guess which PGA Tour player is performing a golf swing based on GIFs of their swings.
-            It's a fun way to test your knowledge of the PGA players!
-        """)
     
     st.markdown('</div>', unsafe_allow_html=True)
