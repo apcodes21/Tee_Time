@@ -215,9 +215,18 @@ elif selected_tab == "Past Player List":
     st.write("""
         Here we will display a list of previous player guesses.
     """)
-    if st.session_state.player_history:
-        player_data = [(entry["date"], entry["https://vimeo.com/1029391107"]) for entry in st.session_state.player_history]
-        st.table(player_data)
+
+# Sample player history data for demonstration
+if st.session_state.player_history:
+    # Create a list with date and clickable links
+    player_data = [
+        (entry["date"], f"[Click here]({entry['https://vimeo.com/1029391107']})") 
+        for entry in st.session_state.player_history
+    ]
+    
+    # Display the data as Markdown
+    for date, link in player_data:
+        st.markdown(f"| {date} | {link} |")
     else:
         st.write("No player data available.")
 
