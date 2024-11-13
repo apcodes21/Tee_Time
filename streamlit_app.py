@@ -216,7 +216,7 @@ elif selected_tab == "Past Player List":
         Here we will display a list of previous player guesses.
     """)
     if st.session_state.player_history:
-        player_data = [(entry["date"], entry["player"], entry["video"]) for entry in st.session_state.player_history]
+        player_data = [(entry["date"], entry["video"]) for entry in st.session_state.player_history]
         st.table(player_data)
     else:
         st.write("No player data available.")
