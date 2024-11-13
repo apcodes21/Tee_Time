@@ -3,7 +3,7 @@ import streamlit as st
 import streamlit as st
 
 # Set page config (for better control over the title and layout)
-st.set_page_config(page_title="Professional Webpage", page_icon=":book:", layout="wide")
+st.set_page_config(page_title="Tee it Up", page_icon=":book:", layout="wide")
 
 # Header Section
 st.markdown("""
@@ -43,7 +43,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Display Header
-st.markdown('<p class="header">Guess the PGA Player's swing</p>', unsafe_allow_html=True)
+st.markdown('<p class="header">Guess the PGA Players swing</p>', unsafe_allow_html=True)
 st.markdown('<p class="sub-header">An example of a professional header and table of contents</p>', unsafe_allow_html=True)
 
 # Table of Contents Sidebar (Navigation links)
