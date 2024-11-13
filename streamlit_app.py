@@ -1,16 +1,17 @@
 import streamlit as st
-import datetime
 
 # Custom CSS for full-width layout
 st.markdown("""
     <style>
+        /* Remove default padding and margins */
         body {
             margin: 0;
             padding: 0;
         }
 
+        /* Full-width header */
         .header {
-            background-color: #006400;
+            background-color: #006400;  /* Dark green color */
             color: white;
             padding: 20px 0;
             text-align: center;
@@ -20,6 +21,7 @@ st.markdown("""
             box-sizing: border-box;
         }
 
+        /* Button styling */
         .tab-buttons {
             display: flex;
             justify-content: center;
@@ -41,12 +43,14 @@ st.markdown("""
             background-color: #333;
         }
 
+        /* Full-width content */
         .content {
             width: 100%;
             padding: 20px;
             box-sizing: border-box;
         }
 
+        /* Main content area */
         .main-content {
             width: 100%;
             display: flex;
@@ -54,12 +58,14 @@ st.markdown("""
             align-items: center;
         }
 
+        /* Align image and other elements properly */
         .main-content img {
             width: 100%;
-            max-width: 1000px;
+            max-width: 1000px; /* Limit max width to prevent over-expansion */
             margin-top: 20px;
         }
 
+        /* Make buttons for tabs appear full width and centered */
         .tab-buttons button {
             width: auto;
             margin: 0 10px;
@@ -92,42 +98,107 @@ with col4:
 # Main content area (centered)
 st.markdown('<div class="main-content">', unsafe_allow_html=True)
 
-# Initialize session state to store past guesses
 if 'player_history' not in st.session_state:
     st.session_state.player_history = []
 
+
+
 # Tab Content
 if selected_tab == "Home":
-    st.subheader(f"Player of the Day: {datetime.date.today().strftime('%m/%d/%Y')}")
+    st.subheader("#1: 11/14/2024")
     st.subheader("Welcome to the PGA Player Swing Guessing Game!")
     st.write("""
         Look at the swing GIF and try to guess the player performing the swing. You can select the player's name 
         from the suggestions that appear as you type.
     """)
+    # # Display the GIF of the player's swing (replace with an actual player's swing GIF)
+    # st.video("https://vimeo.com/1029391107")  # Example GIF URL
 
-    # Vimeo video ID for the day's player
+    # Vimeo video ID
     player_dict = {
-        "name": "Scottie Scheffler",
-        "video_id": "1029391107",
-        "full_path": "https://player.vimeo.com/video/1029391107"
+    "name": "Scottie Scheffler",
+    "video_id": "1029391107",
+    "full_path": "https://player.vimeo.com/video/1029391107"
     }
-
-    video_id = player_dict["video_id"]
     
-    # Embed the Vimeo video
+    video_id = "1029391107"  # Replace with your Vimeo video ID
+    
+    # Embed the Vimeo video with autoplay and loop enabled
     embed_code = f"""
     <iframe src="https://player.vimeo.com/video/{video_id}?autoplay=1&loop=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     """
+    # Display the embedded video using markdown
     st.markdown(embed_code, unsafe_allow_html=True)
 
-    # Add today's player to the session history (if it's not already added)
-    today_date = datetime.date.today().strftime('%Y-%m-%d')
-    if not any(entry['date'] == today_date for entry in st.session_state.player_history):
-        st.session_state.player_history.append({
-            "date": today_date,
-            "player": player_dict["name"],
-            "video": player_dict["full_path"]
-        })
+    
+    # List of players for guessing
+    players = [
+    "Jon Rahm", "Sahith Theegala", "Rory McIlroy", "Scottie Scheffler", "Patrick Cantlay", "Collin Morikawa",
+    "Jordan Spieth", "Xander Schauffele", "Brooks Koepka", "Justin Thomas", "Cameron Smith",
+    "Hideki Matsuyama", "Sam Burns", "Will Zalatoris", "Viktor Hovland", "Tony Finau",
+    "Matt Fitzpatrick", "Tom Kim", "Tommy Fleetwood", "Jason Day", "Dustin Johnson",
+    "Bubba Watson", "Sungjae Im", "Si Woo Kim", "Brian Harman", "Keegan Bradley",
+    "Adam Scott", "Louis Oosthuizen", "Zach Johnson", "Gary Woodland", "Billy Horschel",
+    "Cameron Young", "Maverick McNealy", "Max Homa", "Scott Stallings", "Sepp Straka",
+    "Mark Hubbard", "K.H. Lee", "Denny McCarthy", "J.T. Poston", "Chris Kirk",
+    "Lucas Glover", "Sungjae Im", "Satoshi Kodaira", "Sam Ryder", "Nick Taylor",
+    "Stewart Cink", "Ryan Palmer", "Matt Kuchar", "Kevin Kisner", "Bryson DeChambeau",
+    "Phil Mickelson", "Tiger Woods", "Lee Hodges", "Jordan Spieth", "Joaquín Niemann",
+    "Si Woo Kim", "Bryan Gay", "Charles Howell III", "Robert Streb", "Alex Noren",
+    "Tom Hoge", "Jason Kokrak", "Luke List", "Richard Bland", "Gary Woodland",
+    "Scott Piercy", "Danny Lee", "Michael Thompson", "Aaron Wise", "Adam Hadwin",
+    "Patton Kizzire", "Brian Gay", "Charley Hoffman", "Stewart Cink", "Pat Perez",
+    "Dylan Frittelli", "Andrew Putnam", "Joel Dahmen", "Scott Brown", "Kevin Na",
+    "Lucas Herbert", "Billy Mayfair", "Jim Furyk", "Bryce Garnett", "Troy Merritt",
+    "Kyle Stanley", "Brendan Steele", "Russell Knox", "Kevin Chappell", "Wyndham Clark",
+    "J.B. Holmes", "Mark Wilson", "Henrik Norlander", "Austin Cook", "Joel Dahmen",
+    "Sam Saunders", "Jesse Mueller", "Adam Long", "Zac Blair", "David Lipsky",
+    "Brandon Hagy", "Chad Ramey", "Martin Laird", "Chris Stroud", "Mackenzie Hughes",
+    "Cameron Champ", "Ryan Moore", "Matt Jones", "James Hahn", "Harold Varner III",
+    "Eric Cole", "Troy Merritt", "Vaughn Taylor", "Chris Baker", "Doug Ghim",
+    "D.J. Trahan", "Cameron Percy", "Michael Kim", "Ben Martin", "Stewart Cink",
+    "Vince Whaley", "Justin Suh", "Tyler Duncan", "Jared Wolfe", "David Toms",
+    "Ryan Armour", "Kurt Kitayama", "Nick Watney", "Peter Malnati", "Brice Garnett",
+    "Brian Stuard", "Bertie O'Neill", "Chad Campbell", "Jimmy Walker", "Jason Dufner",
+    "Morgan Hoffmann", "Matt Every", "Ricky Barnes", "Craig Stadler", "Curtis Strange",
+    "Mark O'Meara", "John Daly", "Tom Watson", "Bernhard Langer", "Fred Couples",
+    "Raymond Floyd", "Lee Trevino", "Tom Kite", "Hale Irwin", "Johnny Miller",
+    "Jack Nicklaus", "Gary Player", "Arnold Palmer", "Bobby Jones", "Sam Snead",
+    "Gene Sarazen", "Ben Hogan", "Walter Hagen", "Julius Boros", "Fuzzy Zoeller",
+    "Ken Venturi", "Tom Weiskopf", "David Duval", "Chris DiMarco", "Paul Azinger",
+    "Mark Calcavecchia", "Scott Hoch", "Nick Price", "Mark McNulty", "Greg Norman",
+    "Jim Furyk", "Phil Mickelson", "Mike Weir", "Bernhard Langer", "Fred Funk"
+]
+    
+    # Text input box for user to type the player's name
+    player_input = st.text_input("Start typing the name of the PGA player & press enter:", placeholder="Guess the Tour Pro")
+
+    # Only show suggestions if the user has typed something
+    if player_input:
+        # Filter players based on the input text
+        filtered_players = [player for player in players if player_input.lower() in player.lower()]
+
+        # If there are matching players, display them as clickable buttons
+        if filtered_players:
+            st.write("**Suggestions**:")
+            for player in filtered_players:
+                if st.button(player):  # Create a button for each filtered player
+                    # If a suggestion is clicked, store the player's name as the guess
+                    guess = player
+                    # Correct player for the swing (you can change this dynamically based on the GIF)
+                    correct_player = "Scottie Scheffler"  # Replace this with the actual player for the GIF
+
+                    # Check if the guess is correct and provide feedback
+                    if guess == correct_player:
+                        st.success(f"Congratulations! {guess} is correct!")
+                    else:
+                        st.error(f"Oops! {guess} is not correct. Try again.")
+        else:
+            st.write("No matching players found.")
+    else:
+        st.write("Player Options:.")
+
+
 
 elif selected_tab == "Instructions":
     st.subheader("How to Play:")
@@ -144,8 +215,6 @@ elif selected_tab == "Past Player List":
     st.write("""
         Here we will display a list of previous player guesses.
     """)
-
-    # Create the table for past player guesses
     if st.session_state.player_history:
         player_data = [(entry["date"], entry["player"], entry["video"]) for entry in st.session_state.player_history]
         st.table(player_data)
@@ -160,3 +229,5 @@ elif selected_tab == "About":
     """)
 
 st.markdown('</div>', unsafe_allow_html=True)
+
+
