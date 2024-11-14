@@ -116,13 +116,13 @@ st.markdown('''
 
 date_options = [entry['date'] for entry in past_swings]
 most_recent_date = max(date_options)
-selected_date = st.radio("Pick a Date", date_options, index=date_options.index(most_recent_date))
+# selected_date = st.radio("Pick a Date", date_options, index=date_options.index(most_recent_date))
 
 # Retrieve the corresponding player for the selected date
 correct_player = date_to_player_map.get(selected_date, "Unknown Player")
 
-# Input and Guessing Section
-st.subheader("Guess the PGA Player's Swing")
+# # Input and Guessing Section
+# st.subheader("Guess the PGA Player's Swing")
 
 # Create the input box for guessing the player
 player_input = st.text_input("Enter your guess:", placeholder="Type the player's name")
