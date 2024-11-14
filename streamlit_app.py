@@ -168,19 +168,6 @@ with st.container():
 
         elif selected_tab == "Instructions":
             st.write("Look at the swing and type in the input box which PGA player you think it is")
-           st.markdown("""
-            <div style="display: flex; justify-content: left; align-items: center; height: 100vh; text-align: left; padding-left: 40px; padding-right: 300px;">
-                <div>
-                    <ol style="font-size: 18px;">
-                        <li>Look at the swing GIF displayed above.</li>
-                        <li>Start typing the name of the PGA player you think is performing the swing.</li>
-                        <li>Suggestions will appear based on your input.</li>
-                        <li>Click on a suggestion to make your guess.</li>
-                        <li>After selecting a player, feedback will be provided (correct or incorrect).</li>
-                    </ol>
-                </div>
-            </div>
-        """, unsafe_allow_html=True)
         
         elif selected_tab == "Past Player List":
             st.subheader("Past Player List")
