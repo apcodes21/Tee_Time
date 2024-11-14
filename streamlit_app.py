@@ -321,8 +321,8 @@ if selected_tab == "Home":
                     #     correct_player = "Scottie Scheffler"  # Replace this with the actual player for the GIF
                     if st.button(player):
                         # Check if the guess is correct
-                        if player == correct_player:
-                            st.success(f"Correct! {player} is the player!")
+                        if guess == correct_player:
+                            st.success(f"Correct! {guess} is the player!")
                         else:
                             st.error(f"Good guess! But {guess} is not correct. Please try again.")
                             st.error(f"Wrong guess! {player} is not the player. Try again!")
