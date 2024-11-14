@@ -340,11 +340,10 @@ if selected_tab == "Home":
                     if st.button(player):
                         # Check if the guess is correct
                         if player == correct_player:
-                            st.success(f"Correct! {player} is the player!")
-                            player_input = ''
+                            st.success(f"Correct! {player} is the player!")  
                         else:
                             st.error(f"Wrong guess! {player} is not the player. Try again!")
-                            player_input = ''
+                           
             else:
                 st.write("No matching players found.")
         else:
