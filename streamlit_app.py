@@ -7,7 +7,7 @@ st.set_page_config(page_title="Tee it Up", page_icon=":golf:", layout="wide", in
 # 1. as sidebar menu
 with st.sidebar:
     selected = option_menu("Main Menu", ["Home", 'Instructions'], 
-               icons=['house', 'gear'], menu_icon="cast", default_index=0)
+               icons=['house', 'gear'], menu_icon="golf", default_index=0)
     # Display content based on the selection
     if selected == "Home":
         st.title("Welcome to Tee & Tell")
