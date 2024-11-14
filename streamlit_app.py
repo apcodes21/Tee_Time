@@ -14,19 +14,19 @@ st.markdown("""
         .sub-header {
             font-size: 14px;
             color: #333333;
-            margin-top: 10px;
+            margin-top: 0px;
             text-align: center;
         }
         .toc {
             font-size: 18px;
             font-weight: bold;
             color: #4CAF50;
-            padding: 10px;
+            padding: 0px;
             background-color: #f4f4f4;
             border-radius: 8px;
         }
         .toc-item {
-            padding-left: 20px;
+            padding-left: 0px;
             margin-bottom: 0px;
         }
         .toc-item a {
