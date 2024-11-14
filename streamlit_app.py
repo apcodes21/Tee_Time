@@ -9,6 +9,7 @@ past_swings = [
     {"date": "10/31/2024", "gif_url": "https://github.com/apcodes21/Tee_Time/blob/main/image2.gif?raw=true"},
     # Add more records as necessary
     ]
+
 # 1. as sidebar menu
 with st.sidebar:
     selected = option_menu("Main Menu", ["Home", 'Instructions', 'Past Swings'], 
