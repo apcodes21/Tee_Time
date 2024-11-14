@@ -332,7 +332,7 @@ if selected_tab == "Home":
         #     st.write("Player Options:.")
         # Check for pressing "Enter" and clear input
         
-           if player_input:
+        if player_input:
                 filtered_players = [player for player in players if player_input.lower() in player.lower()]
                 
                 if filtered_players:
