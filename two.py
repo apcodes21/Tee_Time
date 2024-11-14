@@ -321,19 +321,19 @@ if selected_tab == "Home":
         #         st.write("No matching players found.")
         # else:
         #     st.write("Player Options:.")
-            if player_input:
-                filtered_players = [player for player in players if player_input.lower() in player.lower()]
+            # if player_input:
+            #     filtered_players = [player for player in players if player_input.lower() in player.lower()]
                 
-                if filtered_players:
-                    for player in filtered_players:
-                        if st.button(player):
-                            # Check if the guess is correct
-                            if player == correct_player:
-                                st.success(f"Correct! {player} is the player!")
-                            else:
-                                st.error(f"Wrong guess! {player} is not the player. Try again!")
-                else:
-                    st.write("No matching players found.")
+            #     if filtered_players:
+            #         for player in filtered_players:
+            #             if st.button(player):
+            #                 # Check if the guess is correct
+            #                 if player == correct_player:
+            #                     st.success(f"Correct! {player} is the player!")
+            #                 else:
+            #                     st.error(f"Wrong guess! {player} is not the player. Try again!")
+            #     else:
+            #         st.write("No matching players found.")
         if player_input:
             filtered_players = [player for player in players if player_input.lower() in player.lower()]
             
