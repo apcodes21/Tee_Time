@@ -142,6 +142,7 @@ st.markdown("""
         .button-container {
             display: flex;
             gap: 0;
+            justify-content: flex-start;
         }
     </style>
 """, unsafe_allow_html=True)
