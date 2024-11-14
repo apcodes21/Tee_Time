@@ -44,20 +44,20 @@ with st.sidebar:
     elif selected == "Past Swings":
         st.markdown("### Previous games if you missed them!")
 
-        # Get list of all past swing dates
-        date_options = [entry['date'] for entry in past_swings]
+        # # Get list of all past swing dates
+        # date_options = [entry['date'] for entry in past_swings]
 
-        # Default selected date to the most recent one
-        most_recent_date = max(date_options)  # Find the latest date
+        # # Default selected date to the most recent one
+        # most_recent_date = max(date_options)  # Find the latest date
 
-        # Set the default selected date as the most recent one in the radio button
-        selected_date = st.sidebar.radio("Select a Past Swing Date", date_options, index=date_options.index(most_recent_date))
+        # # Set the default selected date as the most recent one in the radio button
+        # selected_date = st.sidebar.radio("Select a Past Swing Date", date_options, index=date_options.index(most_recent_date))
 
-        # Find the selected swing based on the date
-        selected_swing = next((entry for entry in past_swings if entry['date'] == selected_date), None)
+        # # Find the selected swing based on the date
+        # selected_swing = next((entry for entry in past_swings if entry['date'] == selected_date), None)
 
-        if selected_swing:
-            st.session_state.selected_swing = selected_swing
+        # if selected_swing:
+        #     st.session_state.selected_swing = selected_swing
 
 
 
