@@ -298,11 +298,24 @@ st.markdown("""
     <style>
     .stTextInput input {
         background-color: #272626;  /* Adjust this color to match your background */
-        color: ##272626;             /* Make the text color same as the background */
+        color: #272626;             /* Make the text color same as the background */
     }
     .stTextInput input::placeholder {
         color: white;             /* Make placeholder text blend as well */
     }
+    
+    /* Add spacing between buttons */
+    .stButton>button {
+        margin-top: 10px;  /* Adjust this value to increase vertical spacing between buttons */
+        width: 100%;
+        padding: 10px;  /* Adjust padding as needed */
+    }
+    
+    /* Optional: Ensure button container has some spacing too */
+    .stButton {
+        margin-bottom: 10px;
+    }
+    
     </style>
     """, unsafe_allow_html=True)
 # Create a container for the input box to control width
