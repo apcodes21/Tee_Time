@@ -12,17 +12,17 @@ with st.sidebar:
     # Display content based on the selection
     if selected == "Home":
         st.title("Welcome to the Home Page")
-        st.write("This is the homepage of your Streamlit app.")
         
     elif selected == "Instructions":
         st.title("Instructions")
         st.write("""
-            Here are the instructions for using this app:
+            How to use the app:
             
-            1. Select 'Home' to go back to the main page.
-            2. Select 'Instructions' to read this guide.
-            
-            Feel free to explore and let us know if you have any questions!
+            1. Watch the GIF video of a PGA Player's swing.
+            2. Guess the Player by typing in the text box (Ex. Sam)
+                - This will provide a list of Players named Sam on the PGA tour
+            4. Next, Select one of the suggested players that you think matches the swing
+            5. If you are incorrect, delete the current name and try a new name
         """)
    
 
