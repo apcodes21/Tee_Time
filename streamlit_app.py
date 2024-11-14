@@ -175,7 +175,7 @@ with st.container():
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    height: 100vh; /* Full viewport height */
+                    height: 10vh; /* Full viewport height */
                     text-align: center;
                     flex-direction: column; /* Stack elements vertically */
                 }
