@@ -197,42 +197,23 @@ if selected_tab == "Home":
 #     ''',
 #     unsafe_allow_html=True
 # )
-    # # Display the GIF of the player's swing (replace with an actual player's swing GIF)
-    # st.video("https://vimeo.com/1029391107")  # Example GIF URL
-    
-    # st.image("image0.gif")
 
-    st.markdown(
-    """
-    <style>
-        .centered-image {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 50%;  /* You can adjust the percentage to make the image smaller or larger */
-        }
-    </style>
-    """, unsafe_allow_html=True)
-
-#     st.markdown('''
-#     <div style="display: flex; align-items: center; height: 90px;">
-#         <img src="https://github.com/apcodes21/Tee_Time/blob/main/image0.gif?raw=true" alt="GIF" style="height: 500px; margin-center: 300px;">
-#     </div>
-# ''', unsafe_allow_html=True)
-
-
-    st.markdown('''
-        <div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
-            <img src="https://github.com/apcodes21/Tee_Time/blob/main/image0.gif?raw=true" alt="GIF" style="height: 495px;">
-        </div>
-    ''', unsafe_allow_html=True)
-
-    # Vimeo video ID
-    player_dict = {
-    "name": "Scottie Scheffler",
-    "video_id": "1029391107",
-    "full_path": "https://player.vimeo.com/video/1029391107"
-    }
+    # st.markdown(
+    # """
+    # <style>
+    #     .centered-image {
+    #         display: block;
+    #         margin-left: auto;
+    #         margin-right: auto;
+    #         width: 50%;  /* You can adjust the percentage to make the image smaller or larger */
+    #     }
+    # </style>
+    # """, unsafe_allow_html=True)
+    # st.markdown('''
+    #     <div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
+    #         <img src="https://github.com/apcodes21/Tee_Time/blob/main/image0.gif?raw=true" alt="GIF" style="height: 495px;">
+    #     </div>
+    # ''', unsafe_allow_html=True)
     
     # List of players for guessing
     players = [
