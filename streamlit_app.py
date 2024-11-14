@@ -135,7 +135,7 @@ st.markdown("""
     <style>
         .stButton>button {
             margin: 0;
-            padding: 10px 0px;
+            padding: 0px 0px;
             width: 100%;
         }
         .button-container {
