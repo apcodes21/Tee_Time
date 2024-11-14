@@ -134,7 +134,7 @@ selected_tab = "Home"
 st.markdown("""
     <style>
         .stButton>button {
-            margin: -10;
+            margin-top: -10px;
             padding: 0px 0px;
             width: 100%;
             height: -10px;
