@@ -7,9 +7,24 @@ from streamlit_option_menu import option_menu
 
 # 1. as sidebar menu
 with st.sidebar:
-    selected = option_menu("Main Menu", ["Home", 'Settings'], 
+    selected = option_menu("Main Menu", ["Home", 'Instructions'], 
         icons=['house', 'gear'], menu_icon="cast", default_index=1)
-    selected
+    # Display content based on the selection
+    if selected == "Home":
+        st.title("Welcome to the Home Page")
+        st.write("This is the homepage of your Streamlit app.")
+        
+    elif selected == "Instructions":
+        st.title("Instructions")
+        st.write("""
+            Here are the instructions for using this app:
+            
+            1. Select 'Home' to go back to the main page.
+            2. Select 'Instructions' to read this guide.
+            
+            Feel free to explore and let us know if you have any questions!
+        """)
+   
 
 # Header Section
 st.markdown("""
