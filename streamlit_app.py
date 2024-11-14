@@ -209,12 +209,9 @@ with st.container():
 
 # Tab Content
 if selected_tab == "Home":
-    # st.subheader("#1: 11/14/2024")
-    # st.markdown('<h3 style="text-align: center; margin-top: 2px;">#1: 11/14/2024</h3>', unsafe_allow_html=True)
-
     st.markdown(
     '''
-     <h3 style="text-align: center; margin-top: 0px; font-size: 20px;">
+     <h3 style="text-align: center; margin-top: -10px; font-size: 20px;">
         <span style="margin-right: 15px;">#1:</span>
         <span>11/14/2024</span>
     </h3>
