@@ -337,8 +337,6 @@ with col2:
                 <strong>Suggestions:</strong>
             </div>
         """, unsafe_allow_html=True)
-
-            st.write("**Suggestions**:")
             for player in filtered_players:
                 if st.button(player):  # Create a button for each filtered player
                     # If a suggestion is clicked, store the player's name as the guess
