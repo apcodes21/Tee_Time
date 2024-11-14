@@ -55,7 +55,7 @@ with st.sidebar:
         most_recent_date = max(date_options)  # Find the latest date
         
         # Set the default selected date as the most recent one in the radio button
-        selected_date = st.sidebar.radio("Select a Past Swing Date", date_options, index=date_options.index(most_recent_date))
+        # selected_date = st.sidebar.radio("Select a Past Swing Date", date_options, index=date_options.index(most_recent_date))
 
         # # Retrieve the corresponding player for the selected date
         # correct_player = date_to_player_map.get(selected_date, "Unknown Player")
