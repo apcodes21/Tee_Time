@@ -8,7 +8,7 @@ from streamlit_option_menu import option_menu
 # 1. as sidebar menu
 with st.sidebar:
     selected = option_menu("Main Menu", ["Home", 'Instructions'], 
-        icons=['house', 'gear'], menu_icon="cast", default_index=1)
+        icons=['house', 'gear'], menu_icon="cast", default_index=0)
     # Display content based on the selection
     if selected == "Home":
         st.title("Welcome to the Home Page")
