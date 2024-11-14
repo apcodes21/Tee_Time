@@ -132,20 +132,20 @@ tabs = ["Home", "Instructions", "Past Player List", "About"]
 selected_tab = "Home"
 
 st.markdown("""
-    <style>
-        .stButton>button {
-            margin-top: -50px;
-            padding: 0px 0px;
-            width: 100%;
-            height: -10px;
-            display: block;
-        }
-        .button-container {
-            display: flex;
-            gap: 0;
-            justify-content: flex-start;
-        }
-    </style>
+<style>
+    .stButton>button {
+        margin-top: -50px;
+        padding: 0px 0px;
+        width: 100%;
+        height: -10px;
+        display: block;
+    }
+    .button-container {
+        display: flex;
+        gap: 0;
+        justify-content: flex-start;
+    }
+</style>
 """, unsafe_allow_html=True)
 
 # Create a container to hold the buttons
