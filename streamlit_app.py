@@ -156,19 +156,6 @@ with st.container():
     with col1:
         if st.button('Home'):
             selected_tab = "Home"
-            st.markdown("""
-                <div style="display: flex; justify-content: flex-start; align-items: center; height: 100vh; text-align: left; padding-left: 20px; padding-right: 40px;">
-                    <div>
-                        <ol style="font-size: 18px;">
-                            <li>Look at the swing GIF displayed above.</li>
-                            <li>Start typing the name of the PGA player you think is performing the swing.</li>
-                            <li>Suggestions will appear based on your input.</li>
-                            <li>Click on a suggestion to make your guess.</li>
-                            <li>After selecting a player, feedback will be provided (correct or incorrect).</li>
-                        </ol>
-                    </div>
-                </div>
-            """, unsafe_allow_html=True)
     with col2:
         if st.button('Instructions'):
             selected_tab = "Instructions"
@@ -227,6 +214,19 @@ with st.container():
 
 # Tab Content
 if selected_tab == "Home":
+    st.markdown("""
+                <div style="display: flex; justify-content: flex-start; align-items: center; height: 100vh; text-align: left; padding-left: 20px; padding-right: 40px;">
+                    <div>
+                        <ol style="font-size: 18px;">
+                            <li>Look at the swing GIF displayed above.</li>
+                            <li>Start typing the name of the PGA player you think is performing the swing.</li>
+                            <li>Suggestions will appear based on your input.</li>
+                            <li>Click on a suggestion to make your guess.</li>
+                            <li>After selecting a player, feedback will be provided (correct or incorrect).</li>
+                        </ol>
+                    </div>
+                </div>
+            """, unsafe_allow_html=True)
     st.markdown(
     '''
      <h3 style="text-align: center; margin-top: -20px; font-size: 20px;">
