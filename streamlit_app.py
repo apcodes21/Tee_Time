@@ -12,6 +12,7 @@ date_to_player_map = {
     # Add more dates and players as needed
 }
 
+# List of past swings
 past_swings = [
     {"date": "11/14/2024", "gif_url": "https://github.com/apcodes21/Tee_Time/blob/main/image0.gif?raw=true"},
     {"date": "11/07/2024", "gif_url": "https://github.com/apcodes21/Tee_Time/blob/main/golf-xander-schauffele.gif?raw=true"},
@@ -40,7 +41,7 @@ with st.sidebar:
                 - This will provide a list of Players named Sam on the PGA tour
             4. Next, Select one of the suggested players that you think matches the swing
             5. If you are incorrect, delete the current name and try a new name
-            6. If you are correct, wait till next weeks player swing!
+            6. If you are correct, wait till next week's player swing!
         """)
 
     elif selected == "Past Swings":
@@ -100,7 +101,7 @@ if selected == "Home":
 players = [
     "Jon Rahm", "Sahith Theegala", "Rory McIlroy", "Scottie Scheffler", "Patrick Cantlay", "Collin Morikawa",
     "Jordan Spieth", "Xander Schauffele", "Brooks Koepka", "Justin Thomas", "Cameron Smith",
-    "Hideki Matsuyama", "Sam Burns", "Will Zalatoris", "Viktor Hovland", "Tony Finau", # ... add the full player list
+    "Hideki Matsuyama", "Sam Burns", "Will Zalatoris", "Viktor Hovland", "Tony Finau",  # ... add the full player list
 ]
 
 if selected == "Home":
@@ -118,8 +119,14 @@ if selected == "Home":
             if filtered_players:
                 for player in filtered_players:
                     if st.button(player):
+                        # Get the correct player for the selected date
+                        if 'selected_swing' in st.session_state:
+                            selected_swing = st.session_state.selected_swing
+                            correct_player = date_to_player_map.get(selected_swing["date"], "Unknown Player")
+                        else:
+                            correct_player = "Unknown Player"
+                            
                         # Check if the guess is correct
-                        correct_player = date_to_player_map.get(selected_date, "Unknown Player")  # Ensure this is synchronized
                         if player == correct_player:
                             st.success(f"Correct! {player} is the player!")
                         else:
