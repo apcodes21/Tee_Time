@@ -311,10 +311,10 @@ st.markdown("""
         padding: 10px;  /* Adjust padding as needed */
     }
     
-    /* Optional: Ensure button container has some spacing too */
-    .stButton {
-        margin-bottom: 10px;
-    }
+    # /* Optional: Ensure button container has some spacing too */
+    # .stButton {
+    #     margin-bottom: 10px;
+    # }
     
     </style>
     """, unsafe_allow_html=True)
