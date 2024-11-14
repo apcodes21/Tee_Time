@@ -181,7 +181,7 @@ with st.container():
                 }
             </style>
             """, unsafe_allow_html=True)
-          st.write("""
+            st.write("""
                 1. Look at the swing GIF displayed above.<br>
                 2. Start typing the name of the PGA player you think is performing the swing.<br>
                 3. Suggestions will appear based on your input.<br>
