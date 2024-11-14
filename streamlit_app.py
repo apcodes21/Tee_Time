@@ -168,18 +168,18 @@ with st.container():
 
         elif selected_tab == "Instructions":
            st.markdown("""
-                <div style="display: flex; justify-content: flex-start; align-items: center; height: 100vh; text-align: left; padding-right: 100px;">
-                    <div>
-                        <ol style="font-size: 18px;">
-                            <li>Look at the swing GIF displayed above.</li>
-                            <li>Start typing the name of the PGA player you think is performing the swing.</li>
-                            <li>Suggestions will appear based on your input.</li>
-                            <li>Click on a suggestion to make your guess.</li>
-                            <li>After selecting a player, feedback will be provided (correct or incorrect).</li>
-                        </ol>
-                    </div>
+            <div style="display: flex; justify-content: flex-start; align-items: center; height: 100vh; text-align: left; padding-left: 20px; padding-right: 40px;">
+                <div>
+                    <ol style="font-size: 18px;">
+                        <li>Look at the swing GIF displayed above.</li>
+                        <li>Start typing the name of the PGA player you think is performing the swing.</li>
+                        <li>Suggestions will appear based on your input.</li>
+                        <li>Click on a suggestion to make your guess.</li>
+                        <li>After selecting a player, feedback will be provided (correct or incorrect).</li>
+                    </ol>
                 </div>
-            """, unsafe_allow_html=True)
+            </div>
+        """, unsafe_allow_html=True)
         
         elif selected_tab == "Past Player List":
             st.subheader("Past Player List")
