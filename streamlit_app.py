@@ -182,13 +182,13 @@ if selected_tab == "Home":
     # If a user has clicked a past swing date, show the corresponding video
     if 'selected_swing' in st.session_state:
         selected_swing = st.session_state.selected_swing
-        st.markdown(f"### Swing from {selected_swing['date']}")
+        # st.markdown(f"### Swing from {selected_swing['date']}")
         st.markdown(f'<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">'
                     f'<img src="{selected_swing["gif_url"]}" alt="GIF" style="height: 495px;"></div>', unsafe_allow_html=True)
     else:
         st.markdown('''<p>Click on a date from "Past Swings" to view the video here.</p>''')
 
-    st.subheader("#1: 11/14/2024")
+    # st.subheader("#1: 11/14/2024")
 #     '''
 #      <h3 style="text-align: center; margin-top: -20px; font-size: 20px;">
 #         <span style="margin-right: 15px;">#1:</span>
