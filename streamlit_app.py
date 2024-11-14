@@ -187,10 +187,9 @@ if selected_tab == "Home":
                     f'<img src="{selected_swing["gif_url"]}" alt="GIF" style="height: 495px;"></div>', unsafe_allow_html=True)
     else:
         # If no swing is selected, show a default GIF or URL
-        default_url = "https://example.com/default.gif"  # Change this to your desired default URL
+        default_url = "https://github.com/apcodes21/Tee_Time/blob/main/image0.gif"  # Change this to your desired default URL
         st.markdown(f'<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">'
                     f'<img src="{default_url}" alt="Default GIF" style="height: 495px;"></div>', unsafe_allow_html=True)
-        st.markdown('''<p>Click on a date from "Past Swings" to view the video here.</p>''')
 
 
     # st.subheader("#1: 11/14/2024")
