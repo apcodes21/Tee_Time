@@ -210,6 +210,9 @@ tabs = ["Home", "Instructions", "Past Player List", "About"]
 selected_tab = "Home"
 
 if selected_tab == "Home":
+    # # # Retrieve the corresponding player for the selected date
+    correct_player = date_to_player_map.get(selected_date, "Unknown Player")
+    player_input = st.text_input("Enter your guess:", placeholder="Type the player's name")
     # Check if a user has clicked a past swing date, show the corresponding video
     if 'selected_swing' in st.session_state:
         selected_swing = st.session_state.selected_swing
