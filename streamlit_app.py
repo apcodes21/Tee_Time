@@ -27,7 +27,7 @@ st.markdown("""
         }
         .toc-item {
             padding-left: 0px;
-            margin-bottom: 50px;
+            margin-bottom: 0px;
         }
         .toc-item a {
             text-decoration: none;
@@ -76,6 +76,7 @@ st.markdown("""
             justify-content: center;
             margin-top: 0px;
             margin-bottom: 0px;
+            padding-top: 0px;
         }
 
         .tab-buttons button {
