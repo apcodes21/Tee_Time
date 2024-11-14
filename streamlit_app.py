@@ -156,15 +156,15 @@ with st.container():
     with col1:
         if st.button('Home'):
             selected_tab = "Home"
-    with col2:
-        if st.button('Instructions'):
-            selected_tab = "Instructions"
-    with col3:
-        if st.button('Past Player List'):
-            selected_tab = "Past Player List"
-    with col4:
-        if st.button('About'):
-            selected_tab = "About"
+    # with col2:
+    #     if st.button('Instructions'):
+    #         selected_tab = "Instructions"
+    # with col3:
+    #     if st.button('Past Player List'):
+    #         selected_tab = "Past Player List"
+    # with col4:
+    #     if st.button('About'):
+    #         selected_tab = "About"
 
         elif selected_tab == "Instructions":
            st.subheader("How to play")
