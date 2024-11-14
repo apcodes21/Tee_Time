@@ -168,7 +168,7 @@ with st.container():
 
         elif selected_tab == "Instructions":
            st.markdown("""
-            <div style="display: flex; justify-content: left; align-items: center; height: 100vh; text-align: left; padding-left: 500px; padding-right: 40px;">
+            <div style="display: flex; justify-content: left; align-items: center; height: 100vh; text-align: left; padding-left: 40px; padding-right: 300px;">
                 <div>
                     <ol style="font-size: 18px;">
                         <li>Look at the swing GIF displayed above.</li>
