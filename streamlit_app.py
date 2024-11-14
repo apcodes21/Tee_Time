@@ -305,7 +305,7 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 # Create a container for the input box to control width
-col1, col2, col3 = st.columns([1, 3, 1])  # Adjust the column ratios to control the width
+col1, col2, col3 = st.columns([1, 1, 1])  # Adjust the column ratios to control the width
 
 with col2:
     player_input = st.text_input("Start typing the name of the PGA player & press enter:", placeholder="Guess the Tour Pro")
