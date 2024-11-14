@@ -167,32 +167,19 @@ with st.container():
             selected_tab = "About"
 
         elif selected_tab == "Instructions":
-            # Center the subheader
-            st.markdown("""
-            <style>
-                /* Full page container to center content */
-                .centered-container h2 {
-                    margin-left: 20px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    height: 10vh; /* Full viewport height */
-                    text-align: center;
-                    flex-direction: column; /* Stack elements vertically */
-                }
-            </style>
+           st.markdown("""
+                <div style="display: flex; justify-content: center; align-items: center; height: 100vh; text-align: center;">
+                    <div>
+                        <ol style="font-size: 18px;">
+                            <li>Look at the swing GIF displayed above.</li>
+                            <li>Start typing the name of the PGA player you think is performing the swing.</li>
+                            <li>Suggestions will appear based on your input.</li>
+                            <li>Click on a suggestion to make your guess.</li>
+                            <li>After selecting a player, feedback will be provided (correct or incorrect).</li>
+                        </ol>
+                    </div>
+                </div>
             """, unsafe_allow_html=True)
-            st.markdown('<div class="centered-container">', unsafe_allow_html=True)
-
-            # Display the header and instructions inside the centered container
-            st.markdown("<h2>How to Play:</h2>", unsafe_allow_html=True)
-            st.write("""
-                1. Look at the swing GIF displayed above.<br>
-                2. Start typing the name of the PGA player you think is performing the swing.<br>
-                3. Suggestions will appear based on your input.<br>
-                4. Click on a suggestion to make your guess.<br>
-                5. After selecting a player, feedback will be provided (correct or incorrect).
-                """, unsafe_allow_html=True)
         
         elif selected_tab == "Past Player List":
             st.subheader("Past Player List")
