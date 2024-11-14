@@ -62,7 +62,7 @@ st.markdown("""
         .header {
             background-color: #006400;  /* Dark green color */
             color: white;
-            padding: 15px 15;
+            padding: 15px 0;
             text-align: center;
             font-size: 32px;
             font-weight: bold;
