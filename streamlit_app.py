@@ -181,6 +181,10 @@ with st.container():
                 }
             </style>
             """, unsafe_allow_html=True)
+            st.markdown('<div class="centered-container">', unsafe_allow_html=True)
+
+            # Display the header and instructions inside the centered container
+            st.markdown("<h2>How to Play:</h2>", unsafe_allow_html=True)
             st.write("""
                 1. Look at the swing GIF displayed above.<br>
                 2. Start typing the name of the PGA player you think is performing the swing.<br>
