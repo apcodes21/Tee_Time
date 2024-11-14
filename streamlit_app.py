@@ -3,10 +3,15 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 # Set page config (for better control over the title and layout)
 st.set_page_config(page_title="Tee it Up", page_icon=":golf:", layout="wide", initial_sidebar_state='collapsed')
-
+past_swings = [
+    {"date": "11/14/2024", "gif_url": "https://github.com/apcodes21/Tee_Time/blob/main/image0.gif?raw=true"},
+    {"date": "11/07/2024", "gif_url": "https://github.com/apcodes21/Tee_Time/blob/main/image1.gif?raw=true"},
+    {"date": "10/31/2024", "gif_url": "https://github.com/apcodes21/Tee_Time/blob/main/image2.gif?raw=true"},
+    # Add more records as necessary
+]
 # 1. as sidebar menu
 with st.sidebar:
-    selected = option_menu("Main Menu", ["Home", 'Instructions'], 
+    selected = option_menu("Main Menu", ["Home", 'Instructions', 'Past Swings'], 
                icons=['house', 'gear'], menu_icon="golf", default_index=0)
     # Display content based on the selection
     if selected == "Home":
@@ -24,6 +29,22 @@ with st.sidebar:
             5. If you are incorrect, delete the current name and try a new name
             6. If you are correct, wait till next weeks player swing!
         """)
+    elif selected == "Past Swings":
+        st.title("Past Swings")
+        
+        # Display past swings in a table
+        st.markdown("### Past Player Swings")
+        st.write("""
+        Here are some of the past player's swings with the corresponding dates:
+        """)
+        
+        # Create a table with past dates and GIFs
+        past_swings_data = []
+        for entry in past_swings:
+        past_swings_data.append([entry["date"], entry["gif_url"]])
+        
+        # Use st.table to display the past swings as a table
+        st.table(past_swings_data)
    
 
 # Header Section
