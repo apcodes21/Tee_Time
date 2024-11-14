@@ -2,7 +2,7 @@ import streamlit as st
 # Set page config (for better control over the title and layout)
 st.set_page_config(page_title="Tee it Up", page_icon=":golf:", layout="wide")
 
-# Header Section
+:# Header Section
 st.markdown("""
     <style>
         .header {
@@ -10,8 +10,6 @@ st.markdown("""
             font-weight: bold;
             color: #4CAF50;
             text-align: center;
-            margin-top: 0px;  /* Remove any margin to bring the header up */
-            padding: 0px;  /* Remove any extra padding */
         }
         .sub-header {
             font-size: 14px;
@@ -42,13 +40,14 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Display Header
-# Adjust the layout to bring the header closer to the top
+# st.markdown('<p class="header">Guess the PGA Players swing</p>', unsafe_allow_html=True)
 st.markdown('''
-    <div style="display: flex; align-items: center; height: 82px; margin-top: 0px;">
+    <div style="display: flex; align-items: center; height: 82px;">
         <img src="https://github.com/apcodes21/Tee_Time/blob/main/TT.png?raw=true" alt="PGA Logo" style="height: 82px; margin-right: 0px;">
-        <p class="header" style="font-size: 32px; margin: 0; padding: 0;">Guess the PGA Players swing</p>
+        <p class="header" style="font-size: 32px; margin: 0;">Guess the PGA Players swing</p>
     </div>
 ''', unsafe_allow_html=True)
+
 
 # Custom CSS for full-width layout
 st.markdown("""
@@ -63,13 +62,12 @@ st.markdown("""
         .header {
             background-color: #006400;  /* Dark green color */
             color: white;
-            padding: 10px 0;  /* Reduced padding to bring it up */
+            padding: 15px 0;
             text-align: center;
             font-size: 32px;
             font-weight: bold;
             width: 100%;
             box-sizing: border-box;
-            margin-top: 0px;  /* Remove any margin to bring the header higher up */
         }
 
         /* Button styling */
@@ -124,7 +122,6 @@ st.markdown("""
         }
     </style>
 """, unsafe_allow_html=True)
-
 
 
 
