@@ -334,7 +334,6 @@ if selected_tab == "Home":
         
         if player_input:
             filtered_players = [player for player in players if player_input.lower() in player.lower()]
-            st.session_state.player_guess = player_input
             
             if filtered_players:
                 for player in filtered_players:
@@ -342,10 +341,10 @@ if selected_tab == "Home":
                         # Check if the guess is correct
                         if player == correct_player:
                             st.success(f"Correct! {player} is the player!")
-                            st.session_state.player_guess = ''
+                            player_input = ''
                         else:
                             st.error(f"Wrong guess! {player} is not the player. Try again!")
-                            st.session_state.player_guess = ''
+                            player_input = ''
             else:
                 st.write("No matching players found.")
         else:
