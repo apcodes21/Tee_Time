@@ -299,7 +299,7 @@ if selected_tab == "Home":
 
 st.markdown("""
     <style>
-    .stTextInput input {
+    .stTextInput input::placeholder {
         color: black;
     }
     </style>
