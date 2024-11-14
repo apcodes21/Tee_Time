@@ -340,7 +340,7 @@ with col2:
     
                     # Check if the guess is correct and provide feedback
                     if guess == correct_player:
-                        st.success(f"Congratulations! {guess} is correct!")
+                        st.success(f"Aced it! {guess} is correct!")
                     else:
                         st.error(f"Good guess! But {guess} is not correct. Please try again.")
         else:
