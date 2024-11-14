@@ -11,7 +11,7 @@ with st.sidebar:
         icons=['house', 'gear'], menu_icon="cast", default_index=0)
     # Display content based on the selection
     if selected == "Home":
-        st.title("Welcome to the Home Page")
+        st.title("Welcome to Tee & Tell")
         
     elif selected == "Instructions":
         st.title("Instructions")
