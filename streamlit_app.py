@@ -167,7 +167,10 @@ with st.container():
             selected_tab = "About"
 
         elif selected_tab == "Instructions":
-            st.markdown("<h1 style='text-align: center; color: red;'>Some title</h1>", unsafe_allow_html=True)
+     
+            col1, col2, col3 = st.columns([1, 1, 1])  # Adjust the column ratios to control the width
+            with col2:
+                st.markdown("<h1 style='text-align: center; color: red;'>Some title</h1>", unsafe_allow_html=True)
         
         elif selected_tab == "Past Player List":
             st.subheader("Past Player List")
