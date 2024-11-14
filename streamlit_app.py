@@ -318,34 +318,35 @@ st.markdown("""
     
     </style>
     """, unsafe_allow_html=True)
-# Create a container for the input box to control width
-col1, col2, col3 = st.columns([1, 1, 1])  # Adjust the column ratios to control the width
-
-with col2:
-    player_input = st.text_input("", placeholder="Guess the Tour Pro Name")
-
-    # Only show suggestions if the user has typed something
-    if player_input:
-        # Filter players based on the input text
-        filtered_players = [player for player in players if player_input.lower() in player.lower()]
+if selected_tab = "Home":
+    # Create a container for the input box to control width
+    col1, col2, col3 = st.columns([1, 1, 1])  # Adjust the column ratios to control the width
     
-        # If there are matching players, display them as clickable buttons
-        if filtered_players:
-            for player in filtered_players:
-                if st.button(player):  # Create a button for each filtered player
-                    # If a suggestion is clicked, store the player's name as the guess
-                    guess = player
-                    # Correct player for the swing (you can change this dynamically based on the GIF)
-                    correct_player = "Scottie Scheffler"  # Replace this with the actual player for the GIF
+    with col2:
+        player_input = st.text_input("", placeholder="Guess the Tour Pro Name")
     
-                    # Check if the guess is correct and provide feedback
-                    if guess == correct_player:
-                        st.success(f"Aced it! {guess} is correct!")
-                    else:
-                        st.error(f"Good guess! But {guess} is not correct. Please try again.")
+        # Only show suggestions if the user has typed something
+        if player_input:
+            # Filter players based on the input text
+            filtered_players = [player for player in players if player_input.lower() in player.lower()]
+        
+            # If there are matching players, display them as clickable buttons
+            if filtered_players:
+                for player in filtered_players:
+                    if st.button(player):  # Create a button for each filtered player
+                        # If a suggestion is clicked, store the player's name as the guess
+                        guess = player
+                        # Correct player for the swing (you can change this dynamically based on the GIF)
+                        correct_player = "Scottie Scheffler"  # Replace this with the actual player for the GIF
+        
+                        # Check if the guess is correct and provide feedback
+                        if guess == correct_player:
+                            st.success(f"Aced it! {guess} is correct!")
+                        else:
+                            st.error(f"Good guess! But {guess} is not correct. Please try again.")
+            else:
+                st.write("No matching players found.")
         else:
-            st.write("No matching players found.")
-    else:
-        st.write("Player Options:.")
+            st.write("Player Options:.")
     
     st.markdown('</div>', unsafe_allow_html=True)
