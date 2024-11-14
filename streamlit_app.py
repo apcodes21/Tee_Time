@@ -124,8 +124,8 @@ correct_player = date_to_player_map.get(selected_date, "Unknown Player")
 # # Input and Guessing Section
 # st.subheader("Guess the PGA Player's Swing")
 
-# Create the input box for guessing the player
-player_input = st.text_input("Enter your guess:", placeholder="Type the player's name")
+# # Create the input box for guessing the player
+# player_input = st.text_input("Enter your guess:", placeholder="Type the player's name")
 
 # Custom CSS for full-width layout
 st.markdown("""
