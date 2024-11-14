@@ -330,6 +330,16 @@ if selected_tab == "Home":
         #         st.write("No matching players found.")
         # else:
         #     st.write("Player Options:.")
+        # Check for pressing "Enter" and clear input
+        if player_input and player_input != st.session_state.player_guess:
+            st.session_state.player_guess = player_input
+            if st.session_state.player_guess == correct_player:
+                st.success(f"Correct! {player_input} is the player!")
+            else:
+                st.error(f"Wrong guess! {player_input} is not the player. Try again!")
+            
+            # Clear input after checking
+            st.session_state.player_guess = ''
         if player_input:
             filtered_players = [player for player in players if player_input.lower() in player.lower()]
             
