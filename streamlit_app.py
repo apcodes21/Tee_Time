@@ -208,34 +208,6 @@ if selected_tab == "Home":
         default_url = "https://github.com/apcodes21/Tee_Time/blob/main/image0.gif?raw=true"  # Change this to your desired default URL
         st.markdown(f'<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">'
                     f'<img src="{default_url}" alt="Default GIF" style="height: 495px;"></div>', unsafe_allow_html=True)
-
-
-    # st.subheader("#1: 11/14/2024")
-#     '''
-#      <h3 style="text-align: center; margin-top: -20px; font-size: 20px;">
-#         <span style="margin-right: 15px;">#1:</span>
-#         <span>11/14/2024</span>
-#     </h3>
-#     ''',
-#     unsafe_allow_html=True
-# )
-
-    # st.markdown(
-    # """
-    # <style>
-    #     .centered-image {
-    #         display: block;
-    #         margin-left: auto;
-    #         margin-right: auto;
-    #         width: 50%;  /* You can adjust the percentage to make the image smaller or larger */
-    #     }
-    # </style>
-    # """, unsafe_allow_html=True)
-    # st.markdown('''
-    #     <div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
-    #         <img src="https://github.com/apcodes21/Tee_Time/blob/main/image0.gif?raw=true" alt="GIF" style="height: 495px;">
-    #     </div>
-    # ''', unsafe_allow_html=True)
     
     # List of players for guessing
 players = [
@@ -306,45 +278,20 @@ if selected_tab == "Home":
     
     with col2:
         player_input = st.text_input("", placeholder="Guess the Tour Pro Name")
-    
-        # # Only show suggestions if the user has typed something
-        # if player_input:
-        #     # Filter players based on the input text
-        #     filtered_players = [player for player in players if player_input.lower() in player.lower()]
-        
-        #     # If there are matching players, display them as clickable buttons
-        #     if filtered_players:
-        #         for player in filtered_players:
-        #             if st.button(player):  # Create a button for each filtered player
-        #                 # If a suggestion is clicked, store the player's name as the guess
-        #                 guess = player
-        #                 # Correct player for the swing (you can change this dynamically based on the GIF)
-        #                 correct_player = "Scottie Scheffler"  # Replace this with the actual player for the GIF
-        
-        #                 # Check if the guess is correct and provide feedback
-        #                 if guess == correct_player:
-        #                     st.success(f"Aced it! {guess} is correct!")
-        #                 else:
-        #                     st.error(f"Good guess! But {guess} is not correct. Please try again.")
-        #     else:
-        #         st.write("No matching players found.")
-        # else:
-        #     st.write("Player Options:.")
-        # Check for pressing "Enter" and clear input
         
         if player_input:
-                filtered_players = [player for player in players if player_input.lower() in player.lower()]
+            filtered_players = [player for player in players if player_input.lower() in player.lower()]
                 
-                if filtered_players:
-                    for player in filtered_players:
-                        if st.button(player):
-                            # Check if the guess is correct
-                            if player == correct_player:
-                                st.success(f"Correct! {player} is the player!")
-                            else:
-                                st.error(f"Wrong guess! {player} is not the player. Try again!")
-                else:
-                    st.write("No matching players found.")
+            if filtered_players:
+                for player in filtered_players:
+                    if st.button(player):
+                        # Check if the guess is correct
+                        if player == correct_player:
+                            st.success(f"Correct! {player} is the player!")
+                        else:
+                            st.error(f"Wrong guess! {player} is not the player. Try again!")
+            else:
+                st.write("No matching players found.")
         else:
             st.write("Start typing the player's name to get suggestions.")
     
