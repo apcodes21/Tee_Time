@@ -25,11 +25,11 @@ with st.sidebar:
     selected = option_menu("Main Menu", ["Home", 'Instructions', 'Past Swings'], 
                icons=['house', 'gear'], menu_icon="golf", default_index=0)
     # Display content based on the selection
-    # if selected == "Home":
-    #     if 'radio_reset' not in st.session_state:
-    #         st.session_state.radio_reset = False
-    #     else:
-    #         st.session_state.radio_reset = True
+    if selected == "Home":
+        if 'radio_reset' not in st.session_state:
+            st.session_state.radio_reset = False
+        else:
+            st.session_state.radio_reset = True
     if selected == "Home":
         st.title("Welcome to Tee & Tell")
         
@@ -57,8 +57,8 @@ with st.sidebar:
         # Set the default selected date as the most recent one in the radio button
         selected_date = st.sidebar.radio("Select a Past Swing Date", date_options, index=date_options.index(most_recent_date))
 
-        # Retrieve the corresponding player for the selected date
-        correct_player = date_to_player_map.get(selected_date, "Unknown Player")
+        # # Retrieve the corresponding player for the selected date
+        # correct_player = date_to_player_map.get(selected_date, "Unknown Player")
         
         # Find the selected swing based on the date
         selected_swing = next((entry for entry in past_swings if entry['date'] == selected_date), None)
@@ -114,6 +114,26 @@ st.markdown('''
     </div>
 ''', unsafe_allow_html=True)
 
+date_options = [entry['date'] for entry in past_swings]
+most_recent_date = max(date_options)
+selected_date = st.radio("Pick a Date", date_options, index=date_options.index(most_recent_date))
+
+# Retrieve the corresponding player for the selected date
+correct_player = date_to_player_map.get(selected_date, "Unknown Player")
+
+# Display the corresponding GIF for the selected date
+selected_swing = next((entry for entry in past_swings if entry['date'] == selected_date), None)
+if selected_swing:
+    st.image(selected_swing["gif_url"], caption=f"Swing on {selected_date}", use_column_width=True)
+
+# Display the correct player for the selected date
+st.markdown(f"**Correct Player for {selected_date}:** {correct_player}")
+
+# Input and Guessing Section
+st.subheader("Guess the PGA Player's Swing")
+
+# Create the input box for guessing the player
+player_input = st.text_input("Enter your guess:", placeholder="Type the player's name")
 
 # Custom CSS for full-width layout
 st.markdown("""
