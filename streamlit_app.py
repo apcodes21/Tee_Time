@@ -300,11 +300,11 @@ if selected_tab == "Home":
 st.markdown("""
     <style>
     .stTextInput input {
-        background-color: #f0f0f0;  /* Adjust this color to match your background */
-        color: #f0f0f0;             /* Make the text color same as the background */
+        background-color: #272626;  /* Adjust this color to match your background */
+        color: ##272626;             /* Make the text color same as the background */
     }
     .stTextInput input::placeholder {
-        color: #f0f0f0;             /* Make placeholder text blend as well */
+        color: black;             /* Make placeholder text blend as well */
     }
     </style>
     """, unsafe_allow_html=True)
