@@ -304,7 +304,7 @@ st.markdown("""
         color: ##272626;             /* Make the text color same as the background */
     }
     .stTextInput input::placeholder {
-        color: black;             /* Make placeholder text blend as well */
+        color: white;             /* Make placeholder text blend as well */
     }
     </style>
     """, unsafe_allow_html=True)
