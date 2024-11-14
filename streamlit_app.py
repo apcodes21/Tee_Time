@@ -333,8 +333,6 @@ if selected_tab == "Home":
         if player_input:
             # Filter players based on the input text
             filtered_players = [player for player in players if player_input.lower() in player.lower()]
-        
-            # If there are matching players, display them as clickable buttons
             
             if filtered_players:
                 for player in filtered_players:
