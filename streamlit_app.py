@@ -156,7 +156,7 @@ with st.container():
     with col1:
         if st.button('Home'):
             selected_tab = "Home"
-             st.markdown("""
+            st.markdown("""
                 <div style="display: flex; justify-content: flex-start; align-items: center; height: 100vh; text-align: left; padding-left: 20px; padding-right: 40px;">
                     <div>
                         <ol style="font-size: 18px;">
