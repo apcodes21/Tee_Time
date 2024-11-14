@@ -296,9 +296,19 @@ if selected_tab == "Home":
     "Mark Calcavecchia", "Scott Hoch", "Nick Price", "Mark McNulty", "Greg Norman",
     "Jim Furyk", "Phil Mickelson", "Mike Weir", "Bernhard Langer", "Fred Funk"
 ]
-    
-# Text input box for user to type the player's name
-player_input = st.text_input("Start typing the name of the PGA player & press enter:", placeholder="Guess the Tour Pro")
+
+st.markdown("""
+    <style>
+    .stTextInput input {
+        color: black;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+# Create a container for the input box to control width
+col1, col2, col3 = st.columns([1, 3, 1])  # Adjust the column ratios to control the width
+
+with col2:
+    player_input = st.text_input("Start typing the name of the PGA player & press enter:", placeholder="Guess the Tour Pro")
 
 # Only show suggestions if the user has typed something
 if player_input:
