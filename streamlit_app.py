@@ -30,10 +30,10 @@ with st.sidebar:
             6. If you are correct, wait till next weeks player swing!
         """)
     elif selected == "Past Swings":
-        st.title("Past Swings")
+        # st.title("Past Swings")
         
         # Display past swings in a table
-        st.markdown("### Past Player Swings")
+        st.markdown("###  Previous games if you missed them!")
         st.write("""
         Previous games if you missed them!:
         """)
