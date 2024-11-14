@@ -96,7 +96,7 @@ st.markdown("""
         /* Full-width content */
         .content {
             width: 100%;
-            padding: 20px;
+            padding: 0px;
             box-sizing: border-box;
         }
 
@@ -135,7 +135,7 @@ st.markdown("""
     <style>
         .stButton>button {
             margin: 0;
-            padding: 10px 20px;
+            padding: 10px 0px;
             width: 100%;
         }
         .button-container {
