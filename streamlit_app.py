@@ -302,18 +302,30 @@ if selected_tab == "Home":
                 for player in filtered_players:
                     if st.button(player):  # Create a button for each filtered player
                         # If a suggestion is clicked, store the player's name as the guess
-                        guess = player
-                        # Correct player for the swing (you can change this dynamically based on the GIF)
-                        correct_player = "Scottie Scheffler"  # Replace this with the actual player for the GIF
+                        selected_date = st.sidebar.radio("Select a Past Swing Date", list(date_to_player_map.keys()))
+                        correct_player = date_to_player_map[selected_date]
 
                         # Check if the guess is correct and provide feedback
-                        if guess == correct_player:
-                            st.success(f"Aced it! {guess} is correct!")
+                        if player == correct_player:
+                            st.success(f"Aced it! {player} is correct!")
                         else:
-                            st.error(f"Good guess! But {guess} is not correct. Please try again.")
+                            st.error(f"Good guess! But {player} is not correct. Please try again.")
             else:
                 st.write("No matching players found.")
         else:
             st.write("Player Options:.")
+        #                 guess = player
+        #                 # Correct player for the swing (you can change this dynamically based on the GIF)
+        #                 correct_player = "Scottie Scheffler"  # Replace this with the actual player for the GIF
+
+        #                 # Check if the guess is correct and provide feedback
+        #                 if guess == correct_player:
+        #                     st.success(f"Aced it! {guess} is correct!")
+        #                 else:
+        #                     st.error(f"Good guess! But {guess} is not correct. Please try again.")
+        #     else:
+        #         st.write("No matching players found.")
+        # else:
+        #     st.write("Player Options:.")
 
     st.markdown('</div>', unsafe_allow_html=True)
