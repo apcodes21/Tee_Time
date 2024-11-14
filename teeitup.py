@@ -43,7 +43,7 @@ with st.sidebar:
                 - This will provide a list of Players named Sam on the PGA tour
             4. Next, Select one of the suggested players that you think matches the swing
             5. If you are incorrect, delete the current name and try a new name
-            6. If you are correct, wait till next weeks player swing!
+            6. If you are correct, wait till next week's player swing!
         """)
     elif selected == "Past Swings":
         st.markdown("### Previous games if you missed them!")
@@ -119,7 +119,27 @@ player_input = st.text_input("Enter your guess:", placeholder="Type the player's
 players = [
     "Jon Rahm", "Sahith Theegala", "Rory McIlroy", "Scottie Scheffler", "Patrick Cantlay", "Collin Morikawa",
     "Jordan Spieth", "Xander Schauffele", "Brooks Koepka", "Justin Thomas", "Cameron Smith", "Hideki Matsuyama",
-    # Add all players here...
+    "Sam Burns", "Will Zalatoris", "Viktor Hovland", "Tony Finau", "Matt Fitzpatrick", "Tom Kim", "Tommy Fleetwood",
+    "Jason Day", "Dustin Johnson", "Bubba Watson", "Sungjae Im", "Si Woo Kim", "Brian Harman", "Keegan Bradley",
+    "Adam Scott", "Louis Oosthuizen", "Zach Johnson", "Gary Woodland", "Billy Horschel", "Cameron Young", "Maverick McNealy",
+    "Max Homa", "Scott Stallings", "Sepp Straka", "Mark Hubbard", "K.H. Lee", "Denny McCarthy", "J.T. Poston", "Chris Kirk",
+    "Lucas Glover", "Sungjae Im", "Satoshi Kodaira", "Sam Ryder", "Nick Taylor", "Stewart Cink", "Ryan Palmer", "Matt Kuchar",
+    "Kevin Kisner", "Bryson DeChambeau", "Phil Mickelson", "Tiger Woods", "Lee Hodges", "Jordan Spieth", "Joaquín Niemann",
+    "Si Woo Kim", "Bryan Gay", "Charles Howell III", "Robert Streb", "Alex Noren", "Tom Hoge", "Jason Kokrak", "Luke List",
+    "Richard Bland", "Gary Woodland", "Scott Piercy", "Danny Lee", "Michael Thompson", "Aaron Wise", "Adam Hadwin", "Patton Kizzire",
+    "Brian Gay", "Charley Hoffman", "Stewart Cink", "Pat Perez", "Dylan Frittelli", "Andrew Putnam", "Joel Dahmen", "Scott Brown",
+    "Kevin Na", "Lucas Herbert", "Billy Mayfair", "Jim Furyk", "Bryce Garnett", "Troy Merritt", "Kyle Stanley", "Brendan Steele",
+    "Russell Knox", "Kevin Chappell", "Wyndham Clark", "J.B. Holmes", "Mark Wilson", "Henrik Norlander", "Austin Cook", "Joel Dahmen",
+    "Sam Saunders", "Jesse Mueller", "Adam Long", "Zac Blair", "David Lipsky", "Brandon Hagy", "Chad Ramey", "Martin Laird",
+    "Chris Stroud", "Mackenzie Hughes", "Cameron Champ", "Ryan Moore", "Matt Jones", "James Hahn", "Harold Varner III", "Eric Cole",
+    "Troy Merritt", "Vaughn Taylor", "Chris Baker", "Doug Ghim", "D.J. Trahan", "Cameron Percy", "Michael Kim", "Ben Martin",
+    "Stewart Cink", "Vince Whaley", "Justin Suh", "Tyler Duncan", "Jared Wolfe", "David Toms", "Ryan Armour", "Kurt Kitayama",
+    "Nick Watney", "Peter Malnati", "Brice Garnett", "Brian Stuard", "Bertie O'Neill", "Chad Campbell", "Jimmy Walker", "Jason Dufner",
+    "Morgan Hoffmann", "Matt Every", "Ricky Barnes", "Craig Stadler", "Curtis Strange", "Mark O'Meara", "John Daly", "Tom Watson",
+    "Bernhard Langer", "Fred Couples", "Raymond Floyd", "Lee Trevino", "Tom Kite", "Hale Irwin", "Johnny Miller", "Jack Nicklaus",
+    "Gary Player", "Arnold Palmer", "Bobby Jones", "Sam Snead", "Gene Sarazen", "Ben Hogan", "Walter Hagen", "Julius Boros",
+    "Phil Mickelson", "Tiger Woods", "Fred Couples", "Mark Calcavecchia", "Tom Lehman", "Duffy Waldorf", "Jim Furyk", "Darren Clarke",
+    "Vijay Singh", "Corey Pavin", "Hale Irwin", "Steve Elkington", "David Frost", "Ben Crenshaw", "Tom Weiskopf", "Gene Littler",
 ]
 
 # Show player suggestions if there is input
