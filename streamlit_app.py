@@ -66,9 +66,6 @@ with st.sidebar:
         if selected_swing:
             st.session_state.selected_swing = selected_swing
         
-        # Display the correct player for the selected date
-        st.markdown(f"**Correct Player for {selected_date}:** {correct_player}")
-        
    
 
 # Header Section
