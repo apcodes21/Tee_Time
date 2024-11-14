@@ -306,14 +306,14 @@ st.markdown("""
     
     /* Add spacing between buttons */
     .stButton>button {
-        margin-top: 10px;  /* Adjust this value to increase vertical spacing between buttons */
+        margin-top: 5px;  /* Adjust this value to increase vertical spacing between buttons */
         width: 100%;
         padding: 10px;  /* Adjust padding as needed */
     }
     
     # /* Optional: Ensure button container has some spacing too */
     # .stButton {
-    #     margin-bottom: 10px;
+    #     margin-bottom: 5px;
     # }
     
     </style>
