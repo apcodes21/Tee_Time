@@ -345,7 +345,7 @@ if selected_tab == "Home":
                                 st.error(f"Wrong guess! {player} is not the player. Try again!")
                 else:
                     st.write("No matching players found.")
-            else:
-                st.write("Start typing the player's name to get suggestions.")
+        else:
+            st.write("Start typing the player's name to get suggestions.")
     
     st.markdown('</div>', unsafe_allow_html=True)
