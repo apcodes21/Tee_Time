@@ -17,6 +17,11 @@ with st.sidebar:
                icons=['house', 'gear'], menu_icon="golf", default_index=0)
     # Display content based on the selection
     if selected == "Home":
+        if 'radio_reset' not in st.session_state:
+            st.session_state.radio_reset = False
+        else:
+            st.session_state.radio_reset = True
+    if selected == "Home":
         st.title("Welcome to Tee & Tell")
         
     elif selected == "Instructions":
