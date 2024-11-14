@@ -37,11 +37,15 @@ with st.sidebar:
         st.write("""
         Here are some of the past player's swings with the corresponding dates:
         """)
+        date_options = [entry['date'] for entry in past_swings]
+        selected_date = st.sidebar.radio("Select a Past Swing Date", date_options, index=0)
+
+        # Find the selected swing based on the date
+        selected_swing = next((entry for entry in past_swings if entry['date'] == selected_date), None)
+    
+        if selected_swing:
+            st.session_state.selected_swing = selected_swing  # Update session state with the selected swing
         
-        # Create a table with past dates and GIFs
-        for entry in past_swings:
-            if st.button(entry["date"], key=entry["date"]):
-                st.session_state.selected_swing = entry
    
 
 # Header Section
