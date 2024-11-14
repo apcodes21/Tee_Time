@@ -84,7 +84,7 @@ st.markdown("""
             color: white;
             padding: 10px 20px;
             border: none;
-            margin: 0 10px;
+            margin: 0 0px;
             cursor: pointer;
             font-size: 16px;
         }
