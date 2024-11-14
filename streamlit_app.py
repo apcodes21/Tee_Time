@@ -172,7 +172,7 @@ with st.container():
             <style>
                 /* Full page container to center content */
                 .centered-container h2 {
-                    margin-right: 20px;
+                    margin-left: 20px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
