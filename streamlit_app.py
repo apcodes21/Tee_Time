@@ -167,26 +167,10 @@ with st.container():
             selected_tab = "About"
 
         elif selected_tab == "Instructions":
-            st.markdown("""
-                <style>
-                    .stButton>button {
-                        margin-top: -50px;
-                        padding: 0px 0px;
-                        width: 100%;
-                        height: -10px;
-                        display: block;
-                    }
-                    .button-container {
-                        display: flex;
-                        gap: 0;
-                        justify-content: flex-start;
-                    }
-                </style>
-                """, unsafe_allow_html=True)
-     
-            col1, col2, col3 = st.columns([1, 1, 1])  # Adjust the column ratios to control the width
-            with col2:
-                st.markdown("<h1 style='text-align: center; color: red;'>Some title</h1>", unsafe_allow_html=True)
+           st.subheader("How to play")
+            st.write("""
+                Here we will display a list of previous player guesses.
+            """)
         
         elif selected_tab == "Past Player List":
             st.subheader("Past Player List")
