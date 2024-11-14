@@ -318,7 +318,7 @@ st.markdown("""
     
     </style>
     """, unsafe_allow_html=True)
-if selected_tab = "Home":
+if selected_tab == "Home":
     # Create a container for the input box to control width
     col1, col2, col3 = st.columns([1, 1, 1])  # Adjust the column ratios to control the width
     
