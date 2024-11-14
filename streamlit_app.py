@@ -318,6 +318,26 @@ with col2:
     
         # If there are matching players, display them as clickable buttons
         if filtered_players:
+            st.write("""
+            <style>
+                .stButton>button {
+                    margin-top: -31px;
+                    padding: 0px 0px;
+                    width: 100%;
+                    height: -10px;
+                    display: block;
+                }
+                .button-container {
+                    display: flex;
+                    gap: 0;
+                    justify-content: flex-start;
+                }
+            </style>
+            <div>
+                <strong>Suggestions:</strong>
+            </div>
+        """, unsafe_allow_html=True)
+
             st.write("**Suggestions**:")
             for player in filtered_players:
                 if st.button(player):  # Create a button for each filtered player
