@@ -1,55 +1,29 @@
+
 import streamlit as st
 from streamlit_option_menu import option_menu
-
 # Set page config (for better control over the title and layout)
 st.set_page_config(page_title="Tee it Up", page_icon=":golf:", layout="wide", initial_sidebar_state='collapsed')
 
-# 1. Sidebar menu
+# 1. as sidebar menu
 with st.sidebar:
     selected = option_menu("Main Menu", ["Home", 'Instructions'], 
-                           icons=['house', 'gear'], menu_icon="cast", default_index=0)
-    
-# Display content based on the selection
-if selected == "Home":
-    st.title("Welcome to Tee & Tell")
-    
-elif selected == "Instructions":
-    st.title("Instructions")
-    st.markdown("""
-        **How to use the app:**
+               icons=['house', 'gear'], menu_icon="cast", default_index=0)
+    # Display content based on the selection
+    if selected == "Home":
+        st.title("Welcome to Tee & Tell")
         
-        1. Watch the GIF video of a PGA Player's swing.
-        2. Guess the Player by typing in the text box (Ex. Sam).
-           - This will provide a list of Players named 'Sam' on the PGA tour.
-        3. Next, select one of the suggested players that you think matches the swing.
-        4. If you are incorrect, delete the current name and try a new one.
-        5. If you are correct, wait until next week's player swing!
-    """)
-# import streamlit as st
-# from streamlit_option_menu import option_menu
-# # Set page config (for better control over the title and layout)
-# st.set_page_config(page_title="Tee it Up", page_icon=":golf:", layout="wide", initial_sidebar_state='collapsed')
-
-# # 1. as sidebar menu
-# with st.sidebar:
-#     selected = option_menu("Main Menu", ["Home", 'Instructions'], 
-#         icons=['house', 'gear'], menu_icon="cast", default_index=0)
-#     # Display content based on the selection
-#     if selected == "Home":
-#         st.title("Welcome to Tee & Tell")
-        
-#     elif selected == "Instructions":
-#         st.title("Instructions")
-#         st.write("""
-#             How to use the app:
+    elif selected == "Instructions":
+        st.title("Instructions")
+        st.write("""
+            How to use the app:
             
-#             1. Watch the GIF video of a PGA Player's swing.
-#             2. Guess the Player by typing in the text box (Ex. Sam)
-#                 - This will provide a list of Players named Sam on the PGA tour
-#             4. Next, Select one of the suggested players that you think matches the swing
-#             5. If you are incorrect, delete the current name and try a new name
-#             6. If you are correct, wait till next weeks player swing!
-#         """)
+            1. Watch the GIF video of a PGA Player's swing.
+            2. Guess the Player by typing in the text box (Ex. Sam)
+                - This will provide a list of Players named Sam on the PGA tour
+            4. Next, Select one of the suggested players that you think matches the swing
+            5. If you are incorrect, delete the current name and try a new name
+            6. If you are correct, wait till next weeks player swing!
+        """)
    
 
 # Header Section
