@@ -4,7 +4,7 @@ import streamlit as st
 st.set_page_config(page_title="Tee it Up", page_icon=":golf:", layout="wide")
 
 from streamlit_option_menu import option_menu
-
+st.set_page_config(page_title="Tee & Tell", layout="wide", initial_sidebar_state="collapsed")
 # 1. as sidebar menu
 with st.sidebar:
     selected = option_menu("Main Menu", ["Home", 'Instructions'], 
