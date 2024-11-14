@@ -5,6 +5,7 @@ from streamlit_option_menu import option_menu
 st.set_page_config(page_title="Tee it Up", page_icon=":golf:", layout="wide")
 past_swings = [
     {"date": "11/14/2024", "gif_url": "https://github.com/apcodes21/Tee_Time/blob/main/image0.gif?raw=true"},
+    #replace with other GIFS:
     {"date": "11/07/2024", "gif_url": "https://github.com/apcodes21/Tee_Time/blob/main/image1.gif?raw=true"},
     {"date": "10/31/2024", "gif_url": "https://github.com/apcodes21/Tee_Time/blob/main/image2.gif?raw=true"},
     # Add more records as necessary
