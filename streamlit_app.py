@@ -167,14 +167,19 @@ with st.container():
             selected_tab = "About"
 
         elif selected_tab == "Instructions":
-            st.subheader("How to Play:")
-            st.write("""
-                1. Look at the swing GIF displayed above.
-                2. Start typing the name of the PGA player you think is performing the swing.
-                3. Suggestions will appear based on your input.
-                4. Click on a suggestion to make your guess.
-                5. After selecting a player, feedback will be provided (correct or incorrect).
-            """)
+            # Center the subheader
+            st.markdown("<h2 style='text-align: center;'>How to Play:</h2>", unsafe_allow_html=True)
+        
+            # Center the instructions text
+            st.markdown("""
+                <div style="text-align: center;">
+                    1. Look at the swing GIF displayed above.<br>
+                    2. Start typing the name of the PGA player you think is performing the swing.<br>
+                    3. Suggestions will appear based on your input.<br>
+                    4. Click on a suggestion to make your guess.<br>
+                    5. After selecting a player, feedback will be provided (correct or incorrect).
+                </div>
+            """, unsafe_allow_html=True)
         
         elif selected_tab == "Past Player List":
             st.subheader("Past Player List")
