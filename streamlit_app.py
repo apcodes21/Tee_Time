@@ -74,8 +74,8 @@ st.markdown("""
         .tab-buttons {
             display: flex;
             justify-content: center;
-            margin-top: 20px;
-            margin-bottom: 20px;
+            margin-top: 0px;
+            margin-bottom: 0px;
         }
 
         .tab-buttons button {
