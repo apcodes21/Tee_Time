@@ -2,7 +2,7 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
 # Set page config (for better control over the title and layout)
-st.set_page_config(page_title="Tee it Up", page_icon=":golf:", layout="wide", initial_sidebar_state='collapsed')
+st.set_page_config(page_title="Tee it Up", page_icon=":golf:", layout="wide")
 past_swings = [
     {"date": "11/14/2024", "gif_url": "https://github.com/apcodes21/Tee_Time/blob/main/image0.gif?raw=true"},
     {"date": "11/07/2024", "gif_url": "https://github.com/apcodes21/Tee_Time/blob/main/image1.gif?raw=true"},
