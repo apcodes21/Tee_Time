@@ -342,9 +342,10 @@ if selected_tab == "Home":
                         # Check if the guess is correct
                         if player == correct_player:
                             st.success(f"Correct! {player} is the player!")
+                            st.session_state.player_guess = ''
                         else:
                             st.error(f"Wrong guess! {player} is not the player. Try again!")
-                        st.session_state.player_guess = ''
+                            st.session_state.player_guess = ''
             else:
                 st.write("No matching players found.")
         else:
