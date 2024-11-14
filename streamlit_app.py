@@ -342,7 +342,7 @@ with col2:
                     if guess == correct_player:
                         st.success(f"Congratulations! {guess} is correct!")
                     else:
-                        st.error(f"Good guess but {guess} is not correct. Please try again.")
+                        st.error(f"Good guess! But {guess} is not correct. Please try again.")
         else:
             st.write("No matching players found.")
     else:
