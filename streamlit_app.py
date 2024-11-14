@@ -34,9 +34,9 @@ with st.sidebar:
         
         # Display past swings in a table
         st.markdown("###  Previous games if you missed them!")
-        st.write("""
-        Previous games if you missed them!:
-        """)
+        # st.write("""
+        # Previous games if you missed them!:
+        # """)
         date_options = [entry['date'] for entry in past_swings]
         selected_date = st.sidebar.radio("Select a Past Swing Date", date_options, index=0)
 
