@@ -279,9 +279,38 @@ if selected_tab == "Home":
     with col2:
         player_input = st.text_input("", placeholder="Guess the Tour Pro Name")
         
+        # if player_input:
+        #     filtered_players = [player for player in players if player_input.lower() in player.lower()]
+                
+        #     if filtered_players:
+        #         for player in filtered_players:
+        #             if st.button(player):
+        #                 # Check if the guess is correct
+        #                 if player == correct_player:
+        #                     st.success(f"Correct! {player} is the player!")
+        #                 else:
+        #                     st.error(f"Wrong guess! {player} is not the player. Try again!")
+        #     else:
+        #         st.write("No matching players found.")
+        # else:
+        #     st.write("Start typing the player's name to get suggestions.")
+
+       # if player_input:
+       #          filtered_players = [player for player in players if player_input.lower() in player.lower()]
+                
+       #          if filtered_players:
+       #              for player in filtered_players:
+       #                  if st.button(player):
+       #                      # Check if the guess is correct
+       #                      if player == correct_player:
+       #                          st.success(f"Correct! {player} is the player!")
+       #                      else:
+       #                          st.error(f"Wrong guess! {player} is not the player. Try again!")
+       #          else:
+       #              st.write("No matching players found.")
         if player_input:
             filtered_players = [player for player in players if player_input.lower() in player.lower()]
-                
+            
             if filtered_players:
                 for player in filtered_players:
                     if st.button(player):
@@ -291,6 +320,7 @@ if selected_tab == "Home":
                         else:
                             st.error(f"Wrong guess! {player} is not the player. Try again!")
             else:
+                st.write("Start typing the player's name to get suggestions.")
                 st.write("No matching players found.")
         else:
             st.write("Start typing the player's name to get suggestions.")
