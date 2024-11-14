@@ -187,7 +187,7 @@ with st.container():
                 3. Suggestions will appear based on your input.<br>
                 4. Click on a suggestion to make your guess.<br>
                 5. After selecting a player, feedback will be provided (correct or incorrect).
-            """, unsafe_allow_html=True)
+                """, unsafe_allow_html=True)
         
         elif selected_tab == "Past Player List":
             st.subheader("Past Player List")
