@@ -214,7 +214,7 @@ if selected_tab == "Home":
 
     st.markdown(
     '''
-    <h3 style="text-align: center; margin-top: 50px; font-size: 20px;">
+    <h3 style="text-align: center; margin-top: 0px; font-size: 20px;">
         <span style="display: block;">#1:</span>
         <span style="display: block; margin-top: 10px;">11/14/2024</span>
     </h3>
