@@ -81,7 +81,7 @@ st.markdown("""
 
         .tab-buttons button {
             background-color: #333;
-            color: white;
+            color: black;
             padding: 10px 20px;
             border: none;
             margin: 0 0px;
