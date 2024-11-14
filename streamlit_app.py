@@ -214,14 +214,14 @@ with st.container():
 
 # Tab Content
 if selected_tab == "Home":
-    '''
-     <h3 style="text-align: center; margin-top: -20px; font-size: 20px;">
-        <span style="margin-right: 15px;">#1:</span>
-        <span>11/14/2024</span>
-    </h3>
-    ''',
-    unsafe_allow_html=True
-)
+#     '''
+#      <h3 style="text-align: center; margin-top: -20px; font-size: 20px;">
+#         <span style="margin-right: 15px;">#1:</span>
+#         <span>11/14/2024</span>
+#     </h3>
+#     ''',
+#     unsafe_allow_html=True
+# )
     # # Display the GIF of the player's swing (replace with an actual player's swing GIF)
     # st.video("https://vimeo.com/1029391107")  # Example GIF URL
     
