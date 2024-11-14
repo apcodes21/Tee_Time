@@ -171,7 +171,8 @@ with st.container():
             st.markdown("""
             <style>
                 /* Full page container to center content */
-                .centered-container {
+                .centered-container h2 {
+                    margin-right: 20px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
