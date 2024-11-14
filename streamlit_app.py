@@ -41,7 +41,7 @@ with st.sidebar:
         # Create a table with past dates and GIFs
         past_swings_data = []
         for entry in past_swings:
-        past_swings_data.append([entry["date"], entry["gif_url"]])
+            past_swings_data.append([entry["date"], entry["gif_url"]])
         
         # Use st.table to display the past swings as a table
         st.table(past_swings_data)
