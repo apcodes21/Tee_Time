@@ -112,13 +112,13 @@ st.markdown("""
         .main-content img {
             width: 50%;
             max-width: 1000px; /* Limit max width to prevent over-expansion */
-            margin-top: 20px;
+            margin-top: 10px;
         }
 
         /* Make buttons for tabs appear full width and centered */
         .tab-buttons button {
             width: auto;
-            margin: 0 10px;
+            margin: 0 -10px;
         }
     </style>
 """, unsafe_allow_html=True)
