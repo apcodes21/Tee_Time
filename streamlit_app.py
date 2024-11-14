@@ -137,7 +137,8 @@ st.markdown("""
             margin: 0;
             padding: 0px 0px;
             width: 100%;
-            height: 0vh;
+            height: auto;
+            display: block;
         }
         .button-container {
             display: flex;
