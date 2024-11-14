@@ -27,7 +27,7 @@ st.markdown("""
         }
         .toc-item {
             padding-left: 0px;
-            margin-bottom: 0px;
+            margin-bottom: 50px;
         }
         .toc-item a {
             text-decoration: none;
