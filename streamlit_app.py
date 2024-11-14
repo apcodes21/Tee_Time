@@ -2,6 +2,12 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 # Set page config (for better control over the title and layout)
 st.set_page_config(page_title="Tee it Up", page_icon=":golf:", layout="wide")
+date_to_player_map = {
+    "11/14/2024": "Scottie Scheffler",
+    "11/07/2024": "Xander Schauffele",  # Update the player for this date
+    "10/31/2024": "Jon Rahm",
+    # Add more dates and players as needed
+}
 past_swings = [
     {"date": "11/14/2024", "gif_url": "https://github.com/apcodes21/Tee_Time/blob/main/image0.gif?raw=true"},
     #replace with other GIFS:
@@ -53,7 +59,20 @@ with st.sidebar:
 
         if selected_swing:
             st.session_state.selected_swing = selected_swing
-
+        date_options = [entry['date'] for entry in past_swings]
+        most_recent_date = max(date_options)
+        selected_date = st.radio("Pick a Date", date_options, index=date_options.index(most_recent_date))
+        
+        # Retrieve the corresponding player for the selected date
+        correct_player = date_to_player_map.get(selected_date, "Unknown Player")
+        
+        # Display the corresponding GIF for the selected date
+        selected_swing = next((entry for entry in past_swings if entry['date'] == selected_date), None)
+        if selected_swing:
+            st.image(selected_swing["gif_url"], caption=f"Swing on {selected_date}", use_column_width=True)
+        
+        # Display the correct player for the selected date
+        st.markdown(f"**Correct Player for {selected_date}:** {correct_player}")
 
 
 # Header Section
@@ -295,20 +314,22 @@ if selected_tab == "Home":
             # If there are matching players, display them as clickable buttons
             if filtered_players:
                 for player in filtered_players:
-                    if st.button(player):  # Create a button for each filtered player
-                        # If a suggestion is clicked, store the player's name as the guess
-                        guess = player
-                        # Correct player for the swing (you can change this dynamically based on the GIF)
-                        correct_player = "Scottie Scheffler"  # Replace this with the actual player for the GIF
-
-                        # Check if the guess is correct and provide feedback
-                        if guess == correct_player:
-                            st.success(f"Aced it! {guess} is correct!")
+                    # if st.button(player):  # Create a button for each filtered player
+                    #     # If a suggestion is clicked, store the player's name as the guess
+                    #     guess = player
+                    #     # Correct player for the swing (you can change this dynamically based on the GIF)
+                    #     correct_player = "Scottie Scheffler"  # Replace this with the actual player for the GIF
+                    if st.button(player):
+                        # Check if the guess is correct
+                        if player == correct_player:
+                            st.success(f"Correct! {player} is the player!")
                         else:
                             st.error(f"Good guess! But {guess} is not correct. Please try again.")
+                            st.error(f"Wrong guess! {player} is not the player. Try again!")
             else:
                 st.write("No matching players found.")
         else:
             st.write("Player Options:.")
+            st.write("Start typing the player's name to get suggestions.")
 
     st.markdown('</div>', unsafe_allow_html=True)
