@@ -168,7 +168,7 @@ with st.container():
 
         elif selected_tab == "Instructions":
            st.subheader("How to play")
-            st.write("""
+           st.write("""
                 Here we will display a list of previous player guesses.
             """)
         
