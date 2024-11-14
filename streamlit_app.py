@@ -23,6 +23,7 @@ with st.sidebar:
                 - This will provide a list of Players named Sam on the PGA tour
             4. Next, Select one of the suggested players that you think matches the swing
             5. If you are incorrect, delete the current name and try a new name
+            6. If you are correct, wait till next weeks player swing!
         """)
    
 
