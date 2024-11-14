@@ -122,7 +122,29 @@ st.markdown('''
     </div>
 ''', unsafe_allow_html=True)
 
+st.markdown("### Select a Past Swing Date:")
 
+# Get list of past swing dates and set the default date
+date_options = [entry['date'] for entry in past_swings]
+most_recent_date = max(date_options)
+selected_date = st.radio("Pick a Date", date_options, index=date_options.index(most_recent_date))
+
+# Retrieve the corresponding player for the selected date
+correct_player = date_to_player_map.get(selected_date, "Unknown Player")
+
+# Display the corresponding GIF for the selected date
+selected_swing = next((entry for entry in past_swings if entry['date'] == selected_date), None)
+if selected_swing:
+    st.image(selected_swing["gif_url"], caption=f"Swing on {selected_date}", use_column_width=True)
+
+# Display the correct player for the selected date
+st.markdown(f"**Correct Player for {selected_date}:** {correct_player}")
+
+# Input and Guessing Section
+st.subheader("Guess the PGA Player's Swing")
+
+# Create the input box for guessing the player
+player_input = st.text_input("Enter your guess:", placeholder="Type the player's name")
 # Custom CSS for full-width layout
 st.markdown("""
     <style>
