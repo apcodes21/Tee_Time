@@ -309,7 +309,7 @@ st.markdown("""
 col1, col2, col3 = st.columns([1, 1, 1])  # Adjust the column ratios to control the width
 
 with col2:
-    player_input = st.text_input("Start typing the name of the PGA player & press enter:", placeholder="Guess the Tour Pro")
+    player_input = st.text_input(placeholder="Guess the Tour Pro Name")
 
     # Only show suggestions if the user has typed something
     if player_input:
@@ -318,25 +318,6 @@ with col2:
     
         # If there are matching players, display them as clickable buttons
         if filtered_players:
-            st.write("""
-            <style>
-                .stButton>button {
-                    margin-top: -31px;
-                    padding: 0px 0px;
-                    width: 100%;
-                    height: -10px;
-                    display: block;
-                }
-                .button-container {
-                    display: flex;
-                    gap: 0;
-                    justify-content: flex-start;
-                }
-            </style>
-            <div>
-                <strong>Suggestions:</strong>
-            </div>
-        """, unsafe_allow_html=True)
             for player in filtered_players:
                 if st.button(player):  # Create a button for each filtered player
                     # If a suggestion is clicked, store the player's name as the guess
