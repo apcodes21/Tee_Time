@@ -305,7 +305,7 @@ if selected_tab == "Home":
     col1, col2, col3 = st.columns([1, 1, 1])  # Adjust the column ratios to control the width
     
     with col2:
-        # player_input = st.text_input("", placeholder="Guess the Tour Pro Name")
+        player_input = st.text_input("", placeholder="Guess the Tour Pro Name")
     
         # # Only show suggestions if the user has typed something
         # if player_input:
